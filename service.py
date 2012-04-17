@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import time
 from datetime import datetime
 import xbmc
@@ -312,7 +313,7 @@ class AutoUpdater:
     def readLastRun(self):
         
         try:
-            f = open(xbmc.translatePath(self.datadir + "last_run.txt"),"r")
+            f = open(unicode(xbmc.translatePath(self.datadir + "last_run.txt"),'utf-8'),"r")
             self.last_run = float(f.read())
             f.close()
         except IOError:
@@ -321,10 +322,10 @@ class AutoUpdater:
 
     def writeLastRun(self):
         #create the addon folder if it doesn't exist
-        if(not os.path.exists(xbmc.translatePath(self.datadir))):
-            os.makedirs(xbmc.translatePath(self.datadir))
-            
-        f = open(xbmc.translatePath(self.datadir + "last_run.txt"),"w")
+        if(not os.path.exists(unicode(xbmc.translatePath(self.datadir),'utf-8'))):
+            os.makedirs(unicode(xbmc.translatePath(self.datadir),'utf-8'))
+
+        f = open(unicode(xbmc.translatePath(self.datadir + "last_run.txt"),'utf-8'),"w")
         
         #write out the value for the last time the program ran
         f.write(str(self.last_run));
