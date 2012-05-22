@@ -75,3 +75,7 @@
 [B]Version 0.6.1[/B]
 
 - added 2 more custom library path options
+
+[B]Version 0.6.2[/B]
+
+- needed a catch in case the last_run.txt file is blank, or has non-integer data. thanks to mmounirou for catching this

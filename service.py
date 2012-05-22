@@ -319,7 +319,7 @@ class AutoUpdater:
             if len(strlastRun) != 0 :
                 self.last_run = float(strlastRun) 
             f.close()
-        except IOError:
+        except:
             #the file doesn't exist, most likely first time running
             self.last_run = 0
 
