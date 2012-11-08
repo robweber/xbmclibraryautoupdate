@@ -4,6 +4,7 @@ from datetime import datetime
 import xbmc
 import xbmcaddon
 import xbmcvfs
+import xbmcgui
 import os
 from resources.lib.croniter import croniter
 
@@ -306,6 +307,13 @@ class AutoUpdater:
                     self.log("Path " + source['file'] + " does not exist")
                     return
 
+        #also check if we should verify with user first
+        if(self.Addon.getSetting('user_confirm_clean') == 'true'):
+            #user can decide 'no' here and exit this
+            runClean = xbmcgui.Dialog().yesno(self.Addon.getLocalizedString(30000),self.Addon.getLocalizedString(30052),self.Addon.getLocalizedString(30053))
+            if(not runClean):
+                return
+                
         #run the clean operation
         self.log("Cleaning Database")
         xbmc.executebuiltin("CleanLibrary(" + media_type + ")")
