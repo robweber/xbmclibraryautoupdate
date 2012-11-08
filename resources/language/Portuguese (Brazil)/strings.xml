@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">XBMC Auto Atualização Coleção</string>
+    <string id="30001">Geral</string>
+    <string id="30002">Vídeo</string>
+    <string id="30003">Música</string>
+    <string id="30004">Atualizar Coleção Vídeos</string>
+    <string id="30005">Atualizar Coleção Músicas</string>
+    <string id="30006">Mostrar Notificações</string>
+    <string id="30007">Rodar durante reprodução</string>
+    <string id="30008">Atraso para iniciar (minutos)</string>
+    <string id="30009">Agendamento Avançado Usado</string>
+    <string id="30010">Total de tempo entre atualizações (horas)</string>
+    <string id="30011">Cron Expressão</string>
+
+    <!-- specific paths -->
+    <string id="30020">Atualização Específica Caminho 1</string>
+    <string id="30021">Atualização Específica Caminho 2</string>
+    <string id="30022">Atualização Específica Caminho 3</string>
+    <string id="30023">Caminho Vídeo</string>
+
+    <!-- disclaimer -->
+    <string id="30030">Aviso Legal Leia</string>
+    <string id="30031">Aviso Legal Caminhos Vídeos</string>
+    <string id="30032">Caminho já deve ser uma fonte de vídeo com conteúdo</string>
+    <string id="30033">Caminho deve corresponder exatamente ao caminho de origem para escanear</string>
+
+    <!-- cleaning -->
+    <string id="30040">Limpando</string>
+    <string id="30041">Limpar Coleções</string>
+    <string id="30042">Verificar Fontes Antes Limpar</string>
+    <string id="30043">Frequência</string>
+    <string id="30044">Após Atualizar</string>
+    <string id="30045">Uma vez por dia</string>
+    <string id="30046">Uma vez por semana</string>
+    <string id="30047">Uma vez por mês</string>
+    <string id="30048">Limpar Coleção Vídeos</string>
+    <string id="30049">Limpar Coleção Músicas</string>
+    <string id="30050">Erro Limpando Banco de Dados</string>
+
+    <!-- manual run -->
+    <string id="30060">Atualização irá rodar novamente</string>
+    <string id="30061">Você deseja executar manualmente uma atualização?</string>
+</strings>

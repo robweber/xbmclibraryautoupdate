@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000"></string>
+    <string id="30001">Generale</string>
+    <string id="30002">Video</string>
+    <string id="30003">Musica</string>
+    <string id="30004">Aggiorna Libreria Video</string>
+    <string id="30005">Aggiorna Libreria Musicale</string>
+    <string id="30006">Mostra Notifiche</string>
+    <string id="30007"></string>
+    <string id="30008"></string>
+    <string id="30009"></string>
+    <string id="30010"></string>
+    <string id="30011"></string>
+
+    <!-- specific paths -->
+    <string id="30020"></string>
+    <string id="30021"></string>
+    <string id="30022"></string>
+    <string id="30023"></string>
+
+    <!-- disclaimer -->
+    <string id="30030"></string>
+    <string id="30031"></string>
+    <string id="30032"></string>
+    <string id="30033"></string>
+
+    <!-- cleaning -->
+    <string id="30040"></string>
+    <string id="30041"></string>
+    <string id="30042"></string>
+    <string id="30043">Frequenza</string>
+    <string id="30044">Dopo l'Aggiornamento</string>
+    <string id="30045">Una Volta al Giorno</string>
+    <string id="30046">Una Volta a Settimana</string>
+    <string id="30047">Una Volta al Mese</string>
+    <string id="30048"></string>
+    <string id="30049"></string>
+    <string id="30050"></string>
+
+    <!-- manual run -->
+    <string id="30060"></string>
+    <string id="30061"></string>
+</strings>

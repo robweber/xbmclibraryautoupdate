@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">XBMC Library Auto Update</string>
+    <string id="30001">Allgemein</string>
+    <string id="30002">Video</string>
+    <string id="30003">Musik</string>
+    <string id="30004"></string>
+    <string id="30005"></string>
+    <string id="30006"></string>
+    <string id="30007"></string>
+    <string id="30008">Startverzögerung (Minuten)</string>
+    <string id="30009">Erweiterten Timer verwenden</string>
+    <string id="30010">Zeit zwischen Updates (Stunden)</string>
+    <string id="30011"></string>
+
+    <!-- specific paths -->
+    <string id="30020"></string>
+    <string id="30021"></string>
+    <string id="30022"></string>
+    <string id="30023">Videopfad</string>
+
+    <!-- disclaimer -->
+    <string id="30030">Disclaimer lesen</string>
+    <string id="30031"></string>
+    <string id="30032"></string>
+    <string id="30033"></string>
+
+    <!-- cleaning -->
+    <string id="30040">Aufräumen</string>
+    <string id="30041">Libraries aufräumen</string>
+    <string id="30042"></string>
+    <string id="30043">Frequenz</string>
+    <string id="30044"></string>
+    <string id="30045">Ein Mal pro Tag</string>
+    <string id="30046">Ein Mal pro Woche</string>
+    <string id="30047">Ein Mal pro Monat</string>
+    <string id="30048"></string>
+    <string id="30049"></string>
+    <string id="30050"></string>
+
+    <!-- manual run -->
+    <string id="30060"></string>
+    <string id="30061">Manuelles Update durchführen?</string>
+</strings>
