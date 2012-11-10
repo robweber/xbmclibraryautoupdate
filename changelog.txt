@@ -2,6 +2,8 @@
 
 added setting to prompt user before doing scheduled clean. Defaults to False. 
 
+added ability to schedule cleaning separate
+
 [b]Version 0.6.4[/b]
 
 - added strings from notifications and logging into the strings.xml files

@@ -143,7 +143,7 @@ class AutoUpdater:
                     #create a separate schedule for cleaning - use right now rather than last_run, never 'catch-up'
                     clean_after_update = False
 
-                    if(self.Addon.getSetting('update_video') == 'true' or (self.Addon.getSetting('use_custom_1_path') == 'true' or self.Addon.getSetting('use_custom_2_path') == 'true' or self.Addon.getSetting('use_custom_3_path') == 'true')):
+                    if(self.Addon.getSetting('library_to_clean') == '0' or self.Addon.getSetting('library_to_clean') == '1'):
                         #video clean schedule starts at 12am
                         aSchedule = CronSchedule()
                         aSchedule.name = self.Addon.getLocalizedString(30048)
@@ -154,7 +154,7 @@ class AutoUpdater:
 
                         self.schedules.append(aSchedule)
                         
-                    if(self.Addon.getSetting('update_music') == 'true'):
+                    if(self.Addon.getSetting('library_to_clean') == '2' or self.Addon.getSetting('library_to_clean') == '0'):
                         #music clean schedule starts at 2am
                         aSchedule = CronSchedule()
                         aSchedule.name = self.Addon.getLocalizedString(30049)
