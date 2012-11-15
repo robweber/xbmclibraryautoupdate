@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-    <string id="30000">XBMC biblioteksautouppdaterare</string>
-    <string id="30001">Allmän</string>
-    <string id="30002">Video</string>
-    <string id="30003">Musik</string>
-    <string id="30004">Uppdatera videobibliotek</string>
-    <string id="30005">Uppdatera musikbibliotek</string>
-    <string id="30006">Visa notifieringar</string>
-    <string id="30007">Kör under uppspelning</string>
-    <string id="30008">Uppstartsfördröjning (minuter)</string>
-    <string id="30009">Använd avancerad timer</string>
-    <string id="30010">Tid mellan uppdateringar (timmar)</string>
-    <string id="30011">Cronuttryck</string>
+    <string id="30000"></string>
+    <string id="30001"></string>
+    <string id="30002"></string>
+    <string id="30003"></string>
+    <string id="30004"></string>
+    <string id="30005"></string>
+    <string id="30006"></string>
+    <string id="30007"></string>
+    <string id="30008"></string>
+    <string id="30009"></string>
+    <string id="30010"></string>
+    <string id="30011"></string>
 
     <!-- specific paths -->
-    <string id="30020">Uppdatera specifik sökväg 1</string>
-    <string id="30021">Uppdatera specifik sökväg 2</string>
-    <string id="30022">Uppdatera specifik sökväg 3</string>
-    <string id="30023">Videosökväg</string>
+    <string id="30020"></string>
+    <string id="30021"></string>
+    <string id="30022"></string>
+    <string id="30023"></string>
 
     <!-- disclaimer -->
-    <string id="30030">Läs ansvarsfriskrivning</string>
-    <string id="30031">Videosökvägsansvarsfriskrivning</string>
-    <string id="30032">Sökvägen måste redan vara en videokälla med innehåll</string>
-    <string id="30033">Sökväg måste matcha källsökvägen exakt för att skannas</string>
+    <string id="30030"></string>
+    <string id="30031"></string>
+    <string id="30032"></string>
+    <string id="30033"></string>
 
     <!-- cleaning -->
-    <string id="30040">Rensar</string>
-    <string id="30041">Rensa bibliotek</string>
-    <string id="30042">Verifiera källor innan rensning</string>
-    <string id="30043">Frekvens</string>
-    <string id="30044">Efter uppdatering</string>
-    <string id="30045">Dagligen</string>
-    <string id="30046">Veckovis</string>
-    <string id="30047">Månadsvis</string>
-    <string id="30048">Rensa videobibliotek</string>
-    <string id="30049">Rensa musikbibliotek</string>
-    <string id="30050">Fel vid rensning av databas</string>
+    <string id="30040"></string>
+    <string id="30041"></string>
+    <string id="30042"></string>
+    <string id="30043"></string>
+    <string id="30044"></string>
+    <string id="30045"></string>
+    <string id="30046"></string>
+    <string id="30047"></string>
+    <string id="30048"></string>
+    <string id="30049"></string>
+    <string id="30050"></string>
+    <string id="30051"></string>
+    <string id="30052"></string>
+    <string id="30053"></string>
+    <string id="30054"></string>
+    <string id="30055"></string>
 
     <!-- manual run -->
-    <string id="30060">Uppdatering kommer att köras igen</string>
-    <string id="30061">Vill du manuellt köra en uppdatering?</string>
+    <string id="30060"></string>
+    <string id="30061"></string>
 </strings>
