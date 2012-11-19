@@ -134,15 +134,21 @@ class AutoUpdater:
             self.log("update timers")
             self.schedules = []
 
-            clean_after_update = False
+            clean_video_after_update = False
+            clean_music_after_update = True
+            
             if(self.Addon.getSetting('clean_libraries') == 'true'):
                 #create clean schedule (if needed)
                 if(int(self.Addon.getSetting("clean_timer")) == 0):
-                    clean_after_update = True  #clean after executing updates
+                    if(self.Addon.getSetting('library_to_clean') == '0' or self.Addon.getSetting('library_to_clean') == '1'):
+                        clean_video_after_update = True
+                    if(self.Addon.getSetting('library_to_clean') == '2' or self.Addon.getSetting('library_to_clean') == '0'):
+                        clean_music_after_update = True
                 else:
                     #create a separate schedule for cleaning - use right now rather than last_run, never 'catch-up'
-                    clean_after_update = False
-
+                    clean_video_after_update = False
+                    clean_music_after_update = False
+                    
                     if(self.Addon.getSetting('library_to_clean') == '0' or self.Addon.getSetting('library_to_clean') == '1'):
                         #video clean schedule starts at 12am
                         aSchedule = CronSchedule()
@@ -173,7 +179,7 @@ class AutoUpdater:
                 aSchedule.command = 'UpdateLibrary(video)'
                 aSchedule.expression = self.checkTimer('video')
                 aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                aSchedule.clean_library = clean_after_update
+                aSchedule.clean_library = clean_video_after_update
                 
                 self.schedules.append(aSchedule)
 
@@ -184,7 +190,7 @@ class AutoUpdater:
                 aSchedule.command = 'UpdateLibrary(music)'
                 aSchedule.expression = self.checkTimer('music')
                 aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                aSchedule.clean_library = clean_after_update
+                aSchedule.clean_library = clean_music_after_update
                 
                 self.schedules.append(aSchedule)
 
@@ -195,7 +201,7 @@ class AutoUpdater:
                 aSchedule.command = 'UpdateLibrary(video,' + self.Addon.getSetting('custom_1_scan_path') + ')'
                 aSchedule.expression = self.checkTimer('custom_1')
                 aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                aSchedule.clean_library = clean_after_update
+                aSchedule.clean_library = clean_video_after_update
                 
                 self.schedules.append(aSchedule)
 
@@ -206,7 +212,7 @@ class AutoUpdater:
                 aSchedule.command = 'UpdateLibrary(video,' + self.Addon.getSetting('custom_2_scan_path') + ')'
                 aSchedule.expression = self.checkTimer('custom_2')
                 aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                aSchedule.clean_library = clean_after_update
+                aSchedule.clean_library = clean_video_after_update
                 
                 self.schedules.append(aSchedule)
 
@@ -217,7 +223,7 @@ class AutoUpdater:
                 aSchedule.command = 'UpdateLibrary(video,' + self.Addon.getSetting('custom_3_scan_path') + ')'
                 aSchedule.expression = self.checkTimer('custom_3')
                 aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                aSchedule.clean_library = clean_after_update
+                aSchedule.clean_library = clean_video_after_update
                 
                 self.schedules.append(aSchedule)
                 
