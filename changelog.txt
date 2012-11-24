@@ -1,3 +1,9 @@
+Version 0.6.6
+
+
+
+branched for eden only
+
 Version 0.6.5
 
 added setting to prompt user before doing scheduled clean. Defaults to False. 
