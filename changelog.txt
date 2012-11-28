@@ -1,3 +1,7 @@
+Version 0.7.0
+
+increment version to keep Eden branch separate
+
 Version 0.6.5
 
 added setting to prompt user before doing scheduled clean. Defaults to False. 
