@@ -298,7 +298,7 @@ class AutoUpdater:
             media_type = 'music'
         
         #check if we should verify paths
-        if(self.Addon.getSetting("verify_paths") == 'true' and not xbmc.getCondVisibility('System.Platform.Windows')):
+        if(utils.getSetting("verify_paths") == 'true' and not xbmc.getCondVisibility('System.Platform.Windows')):
             response = eval(xbmc.executeJSONRPC('{ "jsonrpc" : "2.0", "method" : "Files.GetSources", "params":{"media":"' + media_type + '"}, "id": 1}'))
             for source in response['result']['sources']:
                 if not xbmcvfs.exists(source['file']):
