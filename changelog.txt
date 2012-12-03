@@ -1,3 +1,9 @@
+Version 0.7.1
+
+Started using utils.py as common framework for logging/notifications
+
+fixed unicode error in showing notifications - thanks koying!
+
 Version 0.7.0
 
 increment version to keep Eden branch separate
