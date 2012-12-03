@@ -259,8 +259,8 @@ class AutoUpdater:
         inWords = self.nextRunCountdown(next_run_time.next_run)
         #show the notification (if applicable)
         if(next_run_time.next_run > time.time() and utils.getSetting('notify_next_run') == 'true' and displayToScreen == True):
-            xbmc.executebuiltin("Notification(" + utils.getString(30000) + "," + next_run_time.name + " - " + inWords + ",4000," + xbmc.translatePath(utils.addon_dir() + "/resources/images/clock.png") + ")")
-
+            utils.showNotification(utils.getString(30000),next_run_time.name + " - " + inWords)
+                                   
         return inWords    
 
     def nextRunCountdown(self,nextRun):
@@ -304,7 +304,7 @@ class AutoUpdater:
                 if not xbmcvfs.exists(source['file']):
                     #let the user know this failed, if they subscribe to notifications
                     if(utils.getSetting('notify_next_run') == 'true'):
-                        xbmc.executebuiltin("Notification(" + utils.getString(30050) + ",Source " + source['label'] + " does not exist,4000," + xbmc.translatePath(utils.addon_dir() + "/resources/images/clock.png") + ")")
+                        utils.showNotification(utils.getString(30050),"Source " + source['label'] + " does not exist")
 
                     utils.log("Path " + source['file'] + " does not exist")
                     return

@@ -13,8 +13,8 @@ def addon_dir():
 def log(message,loglevel=xbmc.LOGNOTICE):
     xbmc.log(encode(__addon_id__ + ": " + message),level=loglevel)
 
-def showNotification(message):
-    xbmc.executebuiltin("Notification(" + getString(30000) + "," + message + ",4000," + xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/images/clock.png") + ")")
+def showNotification(title,message):
+    xbmc.executebuiltin("Notification(" + title + "," + message + ",4000," + xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/images/clock.png") + ")")
 
 def getSetting(name):
     return __Addon.getSetting(name)
