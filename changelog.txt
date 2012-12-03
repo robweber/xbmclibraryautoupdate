@@ -1,3 +1,7 @@
+Version 0.6.7
+
+merged master changes including utils.py addition
+
 Version 0.6.6
 
 branched for eden only
