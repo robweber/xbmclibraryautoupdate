@@ -149,7 +149,7 @@ class AutoUpdater:
                         #video clean schedule starts at 12am
                         aSchedule = CronSchedule()
                         aSchedule.name = utils.getString(30048)
-                        aSchedule.timer_type = self.addon_id
+                        aSchedule.timer_type = utils.__addon_id__
                         aSchedule.command = 'video'
                         aSchedule.expression = "0 0 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                         aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
@@ -160,7 +160,7 @@ class AutoUpdater:
                         #music clean schedule starts at 2am
                         aSchedule = CronSchedule()
                         aSchedule.name = utils.getString(30049)
-                        aSchedule.timer_type = self.addon_id
+                        aSchedule.timer_type = utils.__addon_id__
                         aSchedule.command = 'music'
                         aSchedule.expression = "0 2 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                         aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
