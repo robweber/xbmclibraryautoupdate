@@ -356,6 +356,7 @@ class AutoUpdater:
             time.sleep(5)
 
     def _networkUp(self):
+        utils.log("Starting network check")
         try:
             response = urllib2.urlopen('http://www.google.com',timeout=1)
             return True
