@@ -357,9 +357,9 @@ class AutoUpdater:
 
     def _networkUp(self):
         try:
-            response = urllib2.urlopen('http://74.125.113.99',timeout=1)
+            response = urllib2.urlopen('http://www.google.com',timeout=1)
             return True
-        except urllib2.URLError as err:
+        except:
             pass
 
         return False
