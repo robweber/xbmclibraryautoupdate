@@ -2,6 +2,8 @@ Version 0.7.4
 
 removed common plugin cache dependency - was causing CPU issues
 
+used xbmc.Monitor to check for settings updates
+
 Version 0.7.3
 
 added support for multipathed sources in verify sources
