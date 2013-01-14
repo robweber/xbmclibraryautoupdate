@@ -322,20 +322,27 @@ class AutoUpdater:
         xbmc.executebuiltin("CleanLibrary(" + media_type + ")")
     
     def readLastRun(self):
-
-        #get the value from the cache
-        strlastrun = utils.getCache('last_run')
-
-        if(strlastrun != ''):
-            self.last_run = float(strlastrun)
-        else:
-            #the cache doesn't exist, most likely first time running
+        try:
+            self.last_run = 0
+            f = open(unicode(xbmc.translatePath(utils.data_dir() + "last_run.txt"),'utf-8'),"r")
+            strlastRun = f.read()
+            if(len(strlastRun) != 0):
+                self.last_run = float(strlastRun)
+            f.close()
+        except:
+            #the file doesn't exist, most likely first time running
             self.last_run = 0
 
     def writeLastRun(self):
+        #create the addon folder if it doesn't exist
+	if(not os.path.exists(unicode(xbmc.translatePath(utils.data_dir()),'utf-8'))):
+            os.makedirs(unicode(xbmc.translatePath(utils.data_dir()),'utf-8'))
 
-        #write the value to the cache
-        utils.setCache('last_run',str(self.last_run))
+        f = open(unicode(xbmc.translatePath(utils.data_dir() + "last_run.txt"),'utf-8'),"w")
+
+        #write out the value for the last time the program ran
+        f.write(str(self.last_run));
+        f.close();
 
     def scanRunning(self):
         #check if any type of scan is currently running

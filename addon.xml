@@ -3,7 +3,6 @@
     name="XBMC Library Auto Update" version="0.7.3" provider-name="robweber">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.common.plugin.cache" version="1.3.0" />
   </requires>
   <extension point="xbmc.python.script" library="manual.py"> 
      <provides>executable</provides> 
