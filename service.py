@@ -105,23 +105,29 @@ class AutoUpdater:
             if(int(utils.getSetting("clean_timer")) != 0):
                     
                 if(utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1'):
-                    #video clean schedule starts at 12am
+                    #video clean schedule starts at 12am by default
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30048)
                     aSchedule.timer_type = utils.__addon_id__
                     aSchedule.command = 'video'
-                    aSchedule.expression = "0 0 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
+                    if(int(utils.getSetting("clean_timer")) == 4):
+                        aSchedule.expression = utils.getSetting("clean_video_cron_expression")
+                    else:
+                        aSchedule.expression = "0 0 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                     aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
 
                     self.schedules.append(aSchedule)
                         
                 if(utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0'):
-                    #music clean schedule starts at 2am
+                    #music clean schedule starts at 2am by default
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30049)
                     aSchedule.timer_type = utils.__addon_id__
                     aSchedule.command = 'music'
-                    aSchedule.expression = "0 2 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
+                    if(int(utils.getSetting("clean_timer")) == 4):
+                        aSchedule.expression = utils.getSetting("clean_music_cron_expression")
+                    else:
+                        aSchedule.expression = "0 2 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                     aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
     
                     self.schedules.append(aSchedule)

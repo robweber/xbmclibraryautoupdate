@@ -6,6 +6,8 @@ use xbmc.Monitor to check for settings updates
 
 use xbmc.Monitor to monitor db updates
 
+added custom cleaning timers, thanks Ghostdivision
+
 Version 0.7.3
 
 added support for multipathed sources in verify sources
