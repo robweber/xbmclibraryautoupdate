@@ -27,7 +27,7 @@ class AutoUpdater:
     timer_amounts['5'] = 24
 
     def __init__(self):
-        self.monitor = UpdateMonitor(update_settings = self.createSchedules)
+        self.monitor = UpdateMonitor(update_settings = self.createSchedules,after_scan = self.databaseUpdated)
         self.readLastRun()
 
         #force and update on startup to create the array
@@ -77,9 +77,8 @@ class AutoUpdater:
 
                             if(cronJob.timer_type == 'xbmc'):
                                 xbmc.executebuiltin(cronJob.command)
-                                self.waitForScan()
                             else:
-                                self.cleanLibrary(cronJob)
+                                self.cleanLibrary(cronJob.command)
 
                             self.last_run = time.time() - (time.time() % 60)
                             self.writeLastRun()
@@ -90,10 +89,6 @@ class AutoUpdater:
 
                             #show any notifications
                             self.showNotify()
-
-                            #check if we should clean the library too
-                            if(cronJob.clean_library):
-                                self.cleanLibrary(cronJob)
                     else:
                         self.schedules[count].on_delay = True
                         utils.log("Player is running, wait until finished")
@@ -104,21 +99,10 @@ class AutoUpdater:
         utils.log("update timers")
         self.updating = True   #lock so the eval portion does not run
         self.schedules = []
-
-        clean_video_after_update = False
-        clean_music_after_update = True
             
         if(utils.getSetting('clean_libraries') == 'true'):
             #create clean schedule (if needed)
-            if(int(utils.getSetting("clean_timer")) == 0):
-                if(utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1'):
-                    clean_video_after_update = True
-                if(utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0'):
-                    clean_music_after_update = True
-            else:
-                #create a separate schedule for cleaning - use right now rather than last_run, never 'catch-up'
-                clean_video_after_update = False
-                clean_music_after_update = False
+            if(int(utils.getSetting("clean_timer")) != 0):
                     
                 if(utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1'):
                     #video clean schedule starts at 12am
@@ -150,7 +134,6 @@ class AutoUpdater:
             aSchedule.command = 'UpdateLibrary(video)'
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-            aSchedule.clean_library = clean_video_after_update
                 
             self.schedules.append(aSchedule)
 
@@ -161,7 +144,6 @@ class AutoUpdater:
             aSchedule.command = 'UpdateLibrary(music)'
             aSchedule.expression = self.checkTimer('music')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-            aSchedule.clean_library = clean_music_after_update
                 
             self.schedules.append(aSchedule)
 
@@ -172,7 +154,6 @@ class AutoUpdater:
             aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_1_scan_path') + ')'
             aSchedule.expression = self.checkTimer('custom_1')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-            aSchedule.clean_library = clean_video_after_update
                 
             self.schedules.append(aSchedule)
 
@@ -183,7 +164,6 @@ class AutoUpdater:
             aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_2_scan_path') + ')'
             aSchedule.expression = self.checkTimer('custom_2')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-            aSchedule.clean_library = clean_video_after_update
                 
             self.schedules.append(aSchedule)
 
@@ -194,7 +174,6 @@ class AutoUpdater:
             aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_3_scan_path') + ')'
             aSchedule.expression = self.checkTimer('custom_3')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-            aSchedule.clean_library = clean_video_after_update
                 
             self.schedules.append(aSchedule)
 
@@ -266,12 +245,7 @@ class AutoUpdater:
         return result
         
 
-    def cleanLibrary(self,cronJob):
-        #check which database we're in
-        media_type = 'video'
-        if(cronJob.command.find('music') != -1):
-            media_type = 'music'
-        
+    def cleanLibrary(self,media_type):
         #check if we should verify paths
         if(utils.getSetting("verify_paths") == 'true'):
             response = eval(xbmc.executeJSONRPC('{ "jsonrpc" : "2.0", "method" : "Files.GetSources", "params":{"media":"' + media_type + '"}, "id": 1}'))
@@ -325,12 +299,13 @@ class AutoUpdater:
         else:
             return False
         
-    def waitForScan(self):
-        #what for scan to start
-        time.sleep(2)
-
-        while(self.scanRunning()):
-            time.sleep(5)
+    def databaseUpdated(self,database):
+        if(int(utils.getSetting("clean_timer")) == 0):
+            #check if we should clean music, or video
+            if((utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1') and database == 'video'):
+                self.cleanLibrary(database)
+            if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
+                self.cleanLibrary(database)
 
     def _sourceExists(self,source):
         #check if this is a multipath source
@@ -364,7 +339,6 @@ class CronSchedule:
     command = 'UpdateLibrary(video)'
     next_run = 0
     on_delay = False  #used to defer processing until after player finishes
-    clean_library = False  #if clean library command should be run after this schedule
 
     def cleanLibrarySchedule(self,selectedIndex):
         if(selectedIndex == 1):
@@ -379,11 +353,16 @@ class CronSchedule:
 
 class UpdateMonitor(xbmc.Monitor):
     update_settings = None
+    after_scan = None
     
     def __init__(self,*args,**kwargs):
         xbmc.Monitor.__init__(self)
         self.update_settings = kwargs['update_settings']
+        self.after_scan = kwargs['after_scan']
 
     def onSettingsChanged(self):
         xbmc.sleep(1000) #slight delay for notifications
         self.update_settings()
+
+    def onDatabaseUpdated(self,database):
+        self.after_scan(database)
