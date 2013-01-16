@@ -8,6 +8,8 @@ use xbmc.Monitor to monitor db updates
 
 added custom cleaning timers, thanks Ghostdivision
 
+use settings.xml to store last_run data
+
 Version 0.7.3
 
 added support for multipathed sources in verify sources
