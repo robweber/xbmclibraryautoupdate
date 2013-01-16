@@ -255,6 +255,11 @@ class AutoUpdater:
         #check if we should verify paths
         if(utils.getSetting("verify_paths") == 'true'):
             response = eval(xbmc.executeJSONRPC('{ "jsonrpc" : "2.0", "method" : "Files.GetSources", "params":{"media":"' + media_type + '"}, "id": 1}'))
+
+            if(response.has_key('error')):
+                utils.log("Error " + response['error']['data']['method'] + " - " + response['error']['message'],xbmc.LOGDEBUG)
+                return
+            
             for source in response['result']['sources']:
                 if not self._sourceExists(source['file']):
                     #let the user know this failed, if they subscribe to notifications
