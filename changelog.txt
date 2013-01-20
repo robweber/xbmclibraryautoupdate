@@ -1,3 +1,7 @@
+Version 0.7.5
+
+Added network check before running a scan, if it fails it will try again in 10 seconds
+
 Version 0.7.4
 
 removed common plugin cache dependency - was causing CPU issues
