@@ -64,31 +64,35 @@ class AutoUpdater:
             
                 if(cronJob.next_run <= now and now > tempLastRun + 60):
                     if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
-                        #check if this scan was delayed due to playback
-                        if(cronJob.on_delay == True):
-                            #add another minute to the delay
-                            self.schedules[count].next_run = now + 60
-                            self.schedules[count].on_delay = False
-                            utils.log(cronJob.name + " paused due to playback")
+                        #check for valid network connection
+                        if(self._networkUp()):
+                            #check if this scan was delayed due to playback
+                            if(cronJob.on_delay == True):
+                                #add another minute to the delay
+                                self.schedules[count].next_run = now + 60
+                                self.schedules[count].on_delay = False
+                                utils.log(cronJob.name + " paused due to playback")
                         
-                        elif(self.scanRunning() == False):
-                            #run the command for this job
-                            utils.log(cronJob.name)
+                            elif(self.scanRunning() == False):
+                                #run the command for this job
+                                utils.log(cronJob.name)
 
-                            if(cronJob.timer_type == 'xbmc'):
-                                xbmc.executebuiltin(cronJob.command)
-                            else:
-                                self.cleanLibrary(cronJob.command)
+                                if(cronJob.timer_type == 'xbmc'):
+                                    xbmc.executebuiltin(cronJob.command)
+                                else:
+                                    self.cleanLibrary(cronJob.command)
 
-                            self.last_run = time.time() - (time.time() % 60)
-                            self.writeLastRun()
+                                self.last_run = time.time() - (time.time() % 60)
+                                self.writeLastRun()
                         
-                            #find the next run time
-                            cronJob.next_run = self.calcNextRun(cronJob.expression,now)
-                            self.schedules[count] = cronJob
+                                #find the next run time
+                                cronJob.next_run = self.calcNextRun(cronJob.expression,now)
+                                self.schedules[count] = cronJob
 
-                            #show any notifications
-                            self.showNotify()
+                                #show any notifications
+                                self.showNotify()
+                        else:
+                            utils.log("Network down, not running")
                     else:
                         self.schedules[count].on_delay = True
                         utils.log("Player is running, wait until finished")
@@ -302,6 +306,16 @@ class AutoUpdater:
                 self.cleanLibrary(database)
             if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
                 self.cleanLibrary(database)
+
+    def _networkUp(self):
+        utils.log("Starting network check")
+        try:
+            response = urllib2.urlopen('http://www.google.com',timeout=1)
+            return True
+        except:
+            pass
+
+        return False
 
     def _sourceExists(self,source):
         #check if this is a multipath source
