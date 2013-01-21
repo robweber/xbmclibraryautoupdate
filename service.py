@@ -88,9 +88,6 @@ class AutoUpdater:
                                 #find the next run time
                                 cronJob.next_run = self.calcNextRun(cronJob.expression,now)
                                 self.schedules[count] = cronJob
-
-                                #show any notifications
-                                self.showNotify()
                         else:
                             utils.log("Network down, not running")
                     else:
@@ -306,6 +303,9 @@ class AutoUpdater:
                 self.cleanLibrary(database)
             if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
                 self.cleanLibrary(database)
+
+        #show any notifications
+        self.showNotify()
 
     def _networkUp(self):
         utils.log("Starting network check")
