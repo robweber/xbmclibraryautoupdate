@@ -1,5 +1,7 @@
 Version 0.7.6
 
+make sure cleaning is selected by the user
+
 check for playing media before cleaning library after db update
 
 Version 0.7.5

@@ -297,14 +297,17 @@ class AutoUpdater:
             return False
         
     def databaseUpdated(self,database):
-        #check if should update while playing media
-        if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
-            if(int(utils.getSetting("clean_timer")) == 0):
-                #check if we should clean music, or video
-                if((utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1') and database == 'video'):
-                    self.cleanLibrary(database)
-                if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
-                    self.cleanLibrary(database)
+
+        #check if we should clean the library
+        if(utils.getSetting('clean_libraries') == 'true'):
+            #check if should update while playing media
+            if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
+                if(int(utils.getSetting("clean_timer")) == 0):
+                    #check if we should clean music, or video
+                    if((utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1') and database == 'video'):
+                        self.cleanLibrary(database)
+                    if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
+                        self.cleanLibrary(database)
 
         #show any notifications
         self.showNotify()
