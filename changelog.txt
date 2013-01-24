@@ -1,3 +1,7 @@
+Version 0.7.6
+
+check for playing media before cleaning library after db update
+
 Version 0.7.5
 
 Added network check before running a scan, if it fails it will try again in 10 seconds
