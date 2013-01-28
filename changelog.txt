@@ -1,3 +1,7 @@
+Version 0.7.7
+
+updated language files from Transifex
+
 Version 0.7.6
 
 make sure cleaning is selected by the user
