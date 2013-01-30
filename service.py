@@ -11,7 +11,7 @@ from resources.lib.croniter import croniter
 
 class AutoUpdater:
     last_run = 0
-    sleep_time = 10000
+    sleep_time = 500
     schedules = []
     lock = False
     
@@ -47,9 +47,12 @@ class AutoUpdater:
         self.showNotify()
 
         while(not xbmc.abortRequested):
-            self.readLastRun()
 
-            self.evalSchedules()
+            #don't check unless new minute
+            if(time.time() > self.last_run + 60):
+                self.readLastRun()
+
+                self.evalSchedules()
 
             xbmc.sleep(self.sleep_time)
 
@@ -62,7 +65,7 @@ class AutoUpdater:
             while count < len(self.schedules):
                 cronJob = self.schedules[count]
             
-                if(cronJob.next_run <= now and now > tempLastRun + 60):
+                if(cronJob.next_run <= now):
                     if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
                         #check for valid network connection
                         if(self._networkUp()):
@@ -82,9 +85,6 @@ class AutoUpdater:
                                 else:
                                     self.cleanLibrary(cronJob.command)
 
-                                self.last_run = time.time() - (time.time() % 60)
-                                self.writeLastRun()
-                        
                                 #find the next run time
                                 cronJob.next_run = self.calcNextRun(cronJob.expression,now)
                                 self.schedules[count] = cronJob
@@ -94,11 +94,14 @@ class AutoUpdater:
                         self.schedules[count].on_delay = True
                         utils.log("Player is running, wait until finished")
                         
-                count = count + 1                
+                count = count + 1
+
+            #write last run time
+            self.last_run = time.time() - (time.time() % 60)
         
     def createSchedules(self,forceUpdate = False):
         utils.log("update timers")
-        self.updating = True   #lock so the eval portion does not run
+        self.lock = True   #lock so the eval portion does not run
         self.schedules = []
             
         if(utils.getSetting('clean_libraries') == 'true'):
@@ -280,6 +283,9 @@ class AutoUpdater:
         #run the clean operation
         utils.log("Cleaning Database")
         xbmc.executebuiltin("CleanLibrary(" + media_type + ")")
+
+        #write last run time, will trigger notifications
+        self.writeLastRun()
     
     def readLastRun(self):
         if(self.last_run == 0):
@@ -297,7 +303,6 @@ class AutoUpdater:
             return False
         
     def databaseUpdated(self,database):
-
         #check if we should clean the library
         if(utils.getSetting('clean_libraries') == 'true'):
             #check if should update while playing media
@@ -309,8 +314,8 @@ class AutoUpdater:
                     if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
                         self.cleanLibrary(database)
 
-        #show any notifications
-        self.showNotify()
+        #writeLastRun will trigger notifications
+        self.writeLastRun()
 
     def _networkUp(self):
         utils.log("Starting network check")
