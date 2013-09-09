@@ -1,6 +1,7 @@
 Version 0.8.0
 
 clean up monitor on exit
+updated language files from Transifex
 
 Version 0.7.9
 
