@@ -91,6 +91,10 @@ class AutoUpdater:
                                 #find the next run time
                                 cronJob.next_run = self.calcNextRun(cronJob.expression,now)
                                 self.schedules[count] = cronJob
+                                
+                            elif(self.scanRunning() == True):
+                                self.schedules[count].on_delay = True
+                                utils.log("Waiting for other scan to finish")
                         else:
                             utils.log("Network down, not running")
                     else:
