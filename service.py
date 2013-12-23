@@ -145,6 +145,7 @@ class AutoUpdater:
                                                                                 
 
         if(utils.getSetting('update_video') == 'true'):
+            utils.log("Creating timer for Video Library");
             #create the video schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30004)
@@ -155,6 +156,7 @@ class AutoUpdater:
             self.schedules.append(aSchedule)
 
         if(utils.getSetting('update_music') == 'true'):
+            utils.log("Creating timer for Music Library");
             #create the music schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30005)
@@ -165,6 +167,7 @@ class AutoUpdater:
             self.schedules.append(aSchedule)
 
         if(utils.getSetting('use_custom_1_path') == 'true'):
+            utils.log("Creating timer for Custom Path 1");
             #create a custom video path schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30020)
@@ -175,6 +178,7 @@ class AutoUpdater:
             self.schedules.append(aSchedule)
 
         if(utils.getSetting('use_custom_2_path') == 'true'):
+            utils.log("Creating timer for Custom Path 2");
             #create a custom video path schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30021)
@@ -185,6 +189,7 @@ class AutoUpdater:
             self.schedules.append(aSchedule)
 
         if(utils.getSetting('use_custom_3_path') == 'true'):
+            utils.log("Creating timer for Custom Path 3");
             #create a custom video path schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30022)
