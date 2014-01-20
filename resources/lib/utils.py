@@ -1,4 +1,5 @@
 import xbmc
+import xbmcgui
 import xbmcaddon
     
 __addon_id__= 'service.libraryautoupdate'
@@ -14,7 +15,7 @@ def log(message,loglevel=xbmc.LOGNOTICE):
     xbmc.log(encode(__addon_id__ + "-" + __Addon.getAddonInfo('version') + " : " + message),level=loglevel)
 
 def showNotification(title,message):
-    xbmc.executebuiltin("Notification(" + encode(title) + "," + encode(message) + ",4000," + xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/images/clock.png") + ")")
+    xbmcgui.Dialog().notification(encode(getString(30010)),encode(message),time=4000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/icon.png"))
 
 def setSetting(name,value):
     __Addon.setSetting(name,value)
