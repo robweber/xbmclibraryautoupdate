@@ -6,7 +6,7 @@ autoUpdate = AutoUpdater()
 
 nextRun = autoUpdate.showNotify(False)
 #check if we should run updates
-runUpdate = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30060) + nextRun,utils.getString(30061))
+runUpdate = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30060) + nextRun,line2=utils.getString(30061),autoclose=6000)
 
 if(runUpdate):
     #run the program

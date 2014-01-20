@@ -288,7 +288,7 @@ class AutoUpdater:
         #also check if we should verify with user first
         if(utils.getSetting('user_confirm_clean') == 'true'):
             #user can decide 'no' here and exit this
-            runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),utils.getString(30053))
+            runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),line2=utils.getString(30053),autoclose=15000)
             if(not runClean):
                 return
                 
