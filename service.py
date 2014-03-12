@@ -104,7 +104,8 @@ class AutoUpdater:
                 count = count + 1
 
             #write last run time
-            self.last_run = time.time() - (time.time() % 60)
+            now = time.time()
+            self.last_run = now - (now % 60)
         
     def createSchedules(self,forceUpdate = False):
         utils.log("update timers")
@@ -148,7 +149,7 @@ class AutoUpdater:
             utils.log("Creating timer for Video Library");
             #create the video schedule
             aSchedule = CronSchedule()
-            aSchedule.name = utils.getString(30004)
+            aSchedule.name = utils.getString(30012)
             aSchedule.command = 'UpdateLibrary(video)'
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
@@ -159,7 +160,7 @@ class AutoUpdater:
             utils.log("Creating timer for Music Library");
             #create the music schedule
             aSchedule = CronSchedule()
-            aSchedule.name = utils.getString(30005)
+            aSchedule.name = utils.getString(30013)
             aSchedule.command = 'UpdateLibrary(music)'
             aSchedule.expression = self.checkTimer('music')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
