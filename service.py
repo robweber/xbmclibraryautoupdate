@@ -104,7 +104,8 @@ class AutoUpdater:
                 count = count + 1
 
             #write last run time
-            self.last_run = time.time() - (time.time() % 60)
+            now = time.time()
+            self.last_run = now - (now % 60)
         
     def createSchedules(self,forceUpdate = False):
         utils.log("update timers")
