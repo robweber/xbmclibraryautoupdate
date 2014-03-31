@@ -2,7 +2,6 @@
 import time
 from datetime import datetime
 import xbmc
-import xbmcvfs
 import xbmcgui
 import os
 import urllib2
@@ -269,27 +268,10 @@ class AutoUpdater:
         
 
     def cleanLibrary(self,media_type):
-        #check if we should verify paths
-        if(utils.getSetting("verify_paths") == 'true'):
-            response = eval(xbmc.executeJSONRPC('{ "jsonrpc" : "2.0", "method" : "Files.GetSources", "params":{"media":"' + media_type + '"}, "id": 1}'))
-
-            if(response.has_key('error')):
-                utils.log("Error " + response['error']['data']['method'] + " - " + response['error']['message'],xbmc.LOGDEBUG)
-                return
-            
-            for source in response['result']['sources']:
-                if not self._sourceExists(source['file']):
-                    #let the user know this failed, if they subscribe to notifications
-                    if(utils.getSetting('notify_next_run') == 'true'):
-                        utils.showNotification(utils.getString(30050),"Source " + source['label'] + " does not exist")
-
-                    utils.log("Path " + source['file'] + " does not exist")
-                    return
-
-        #also check if we should verify with user first
+        #check if we should verify with user first
         if(utils.getSetting('user_confirm_clean') == 'true'):
             #user can decide 'no' here and exit this
-            runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),utils.getString(30053))
+            runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),line2=utils.getString(30053),autoclose=15000)
             if(not runClean):
                 return
                 
@@ -339,31 +321,6 @@ class AutoUpdater:
             pass
 
         return False
-
-    def _sourceExists(self,source):
-        #check if this is a multipath source
-        if(source.startswith('multipath://')):
-            #code adapted from xbmc source MultiPathDirectory.cpp
-            source = source[12:]
-
-            if(source[-1:] == "/"):
-                source = source[:-1]
-
-            splitSource = source.split('/')
-
-            if(len(splitSource) > 0):
-                for aSource in splitSource:
-                    if not xbmcvfs.exists(urllib2.unquote(aSource)):
-                        #if one source in the multi does not exist, return false
-                        return False
-
-                #if we make it here they all exist
-                return True
-            else:
-                return False
-
-        else:
-            return xbmcvfs.exists(source)
 
 class CronSchedule:
     expression = ''
