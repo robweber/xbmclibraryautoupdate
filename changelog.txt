@@ -1,3 +1,7 @@
+Version 0.8.5
+
+version bump for translation updates
+
 Version 0.8.4
 
 Fix for a very odd timing bug causing multiple scans - thanks tknorris
