@@ -253,7 +253,7 @@ class AutoUpdater:
             return ""
         
         hours = int((cronDiff / 60) / 60)
-        minutes = int((cronDiff / 60) - hours * 60)
+        minutes = int(round(cronDiff / 60.0 - hours * 60))
 
         #we always have at least one minute
         if minutes == 0:
