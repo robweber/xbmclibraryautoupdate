@@ -18,6 +18,7 @@
     <string id="30011">Formuła cron</string>
     <string id="30012">Aktualizacja biblioteki wideo</string>
     <string id="30013">Aktualizacja biblioteki audio</string>
+    <string id="30014">Pracuj tylko gdy bezczynny</string>
 
     <!-- specific paths -->
     <string id="30020">Aktualizuj specyficzną ścieżkę 1</string>
