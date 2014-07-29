@@ -16,6 +16,9 @@
     <string id="30009">Usar Temporizador Avanzado</string>
     <string id="30010">Tempo entre actualizacións (horas)</string>
     <string id="30011">Expresión Cron</string>
+    <string id="30012">Actualizar biblioteca de vídeo</string>
+    <string id="30013">Actualizar biblioteca de música</string>
+    <string id="30014">Executar só cando estea inactivo</string>
 
     <!-- specific paths -->
     <string id="30020">Actualizar Camiño Especifico 1</string>

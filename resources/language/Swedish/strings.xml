@@ -16,6 +16,9 @@
     <string id="30009">Använd avancerad timer</string>
     <string id="30010">Tid mellan uppdateringar (timmar)</string>
     <string id="30011">Cronuttryck</string>
+    <string id="30012">Uppdatera videobibliotek</string>
+    <string id="30013">Uppdatera musikbibliotek</string>
+    <string id="30014">Kör endast vid inaktivitet</string>
 
     <!-- specific paths -->
     <string id="30020">Uppdatera specifik sökväg 1</string>

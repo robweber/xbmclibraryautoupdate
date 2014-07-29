@@ -16,6 +16,8 @@
     <string id="30009">使用过的高级定时器</string>
     <string id="30010">更新的间隔（小时）</string>
     <string id="30011">Cron表达式</string>
+    <string id="30012">更新视频资料库</string>
+    <string id="30013">更新音乐资料库</string>
 
     <!-- specific paths -->
     <string id="30020">更新指定的路径 1</string>

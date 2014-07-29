@@ -16,6 +16,9 @@
     <string id="30009">Agendamento Avançado Usado</string>
     <string id="30010">Total de tempo entre atualizações (horas)</string>
     <string id="30011">Cron Expressão</string>
+    <string id="30012">Atualizar Coleção Vídeos</string>
+    <string id="30013">Atualizar Coleção Músicas</string>
+    <string id="30014">Somente rodar quando ocioso</string>
 
     <!-- specific paths -->
     <string id="30020">Atualização Específica Caminho 1</string>

@@ -1,3 +1,7 @@
+Version 0.9.6
+
+updated language files from Transifex
+
 Version 0.9.5
 
 minor fix to update notification - thanks tknorris

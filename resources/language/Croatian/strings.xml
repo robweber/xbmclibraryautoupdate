@@ -16,6 +16,9 @@
     <string id="30009">Koristi napredno zakazano vrijeme</string>
     <string id="30010">Vrijeme između ažuriranja (sati)</string>
     <string id="30011">Cron izraz</string>
+    <string id="30012">Ažuriraj videoteku</string>
+    <string id="30013">Ažuriraj fonoteku</string>
+    <string id="30014">Samo pokreni u stanju morovanja</string>
 
     <!-- specific paths -->
     <string id="30020">Ažuriraj određenu putanju 1</string>

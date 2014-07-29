@@ -16,6 +16,9 @@
     <string id="30009">고급 타이머 사용</string>
     <string id="30010">업데이트 간격 (시간)</string>
     <string id="30011">Cron Expression</string>
+    <string id="30012">비디오 라이브러리 업데이트</string>
+    <string id="30013">음악 라이브러리 업데이트</string>
+    <string id="30014">유휴상태일 때만 실행</string>
 
     <!-- specific paths -->
     <string id="30020">지정한 경로 1 업데이트</string>
@@ -26,7 +29,7 @@
     <!-- disclaimer -->
     <string id="30030">주의사항 읽기</string>
     <string id="30031">비디오 경로 주의사항</string>
-    <string id="30032">경로는 컨텐츠가 있는 비디오 소스여야 합니다</string>
+    <string id="30032">경로는 콘텐츠가 있는 비디오 소스여야 합니다</string>
     <string id="30033">경로는 소스 경로와 정확히 일치해야 합니다</string>
 
     <!-- cleaning -->
@@ -46,6 +49,8 @@
     <string id="30053">지금 실행하겠습니까?</string>
     <string id="30054">정리할 라이브러리</string>
     <string id="30055">모두</string>
+    <string id="30056">비디오 Cron 표현식</string>
+    <string id="30057">음악 Cron 표현식</string>
 
     <!-- manual run -->
     <string id="30060">업데이트가 다시 실행됩니다</string>

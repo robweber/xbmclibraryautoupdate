@@ -16,6 +16,9 @@
     <string id="30009">Usa Timer Avanzato</string>
     <string id="30010">Tempo tra gli aggiornamenti (ore)</string>
     <string id="30011">Cron Expression</string>
+    <string id="30012">Aggiorna Libreria Video</string>
+    <string id="30013">Aggiorna Libreria Musicale</string>
+    <string id="30014">Esegui solo quando inattivo</string>
 
     <!-- specific paths -->
     <string id="30020">Usa Percorso Specifico 1</string>

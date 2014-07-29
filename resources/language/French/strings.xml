@@ -16,6 +16,9 @@
     <string id="30009">Utiliser minuterie avancée</string>
     <string id="30010">Temps entre les mises à jour (heures)</string>
     <string id="30011">Cron Expression</string>
+    <string id="30012">Mise à jour médiathèque</string>
+    <string id="30013">Mise à jour bibliothèque musical</string>
+    <string id="30014">Exécuter uniquement en cas d'inactivité</string>
 
     <!-- specific paths -->
     <string id="30020">Mise à jour chemin spécifique 1</string>

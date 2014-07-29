@@ -16,6 +16,8 @@
     <string id="30009">Erweiterten Timer verwenden</string>
     <string id="30010">Zeit zwischen Updates (Stunden)</string>
     <string id="30011">Cron Ausdruck</string>
+    <string id="30012">Videobibliothek aktualisieren</string>
+    <string id="30013">Musikbibliothek aktualisieren</string>
 
     <!-- specific paths -->
     <string id="30020">Aktualisiere konkreten Pfad 1</string>

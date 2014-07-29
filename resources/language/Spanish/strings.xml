@@ -16,6 +16,9 @@
     <string id="30009">Usar temporizador avanzado</string>
     <string id="30010">Tiempo entre actualizaciones (horas)</string>
     <string id="30011">Expresión "Cron"</string>
+    <string id="30012">Actualizar Libreria de Video</string>
+    <string id="30013">Actualizar Libreria de Música</string>
+    <string id="30014">Ejecutar solamente cuando esté inactivo</string>
 
     <!-- specific paths -->
     <string id="30020">Actualizar ruta especifica 1</string>

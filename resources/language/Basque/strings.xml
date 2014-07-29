@@ -16,6 +16,8 @@
     <string id="30009">Erabilitako hedatutako programatzailea</string>
     <string id="30010">Egunera tarteko aldia (ordu)</string>
     <string id="30011">Cron espresioa</string>
+    <string id="30012">Eguneratu bideo liburutegia</string>
+    <string id="30013">Eguneratu musika liburutegia</string>
 
     <!-- specific paths -->
     <string id="30020">Eguneratu 1 bide zehatza</string>

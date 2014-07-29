@@ -16,6 +16,8 @@
     <string id="30009">Použiť Pokročilý časovač</string>
     <string id="30010">Čas medzi aktualizáciami (hodiny)</string>
     <string id="30011">Zadanie v Cron formáte</string>
+    <string id="30012">Aktualizovať Video knižnicu</string>
+    <string id="30013">Aktualizovať Hudobnú knižnicu</string>
 
     <!-- specific paths -->
     <string id="30020">Aktualizovať špecifickú cestu 1</string>

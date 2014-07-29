@@ -16,6 +16,9 @@
     <string id="30009">Haladó időzítő használata</string>
     <string id="30010">Frissítések közti idő (óra)</string>
     <string id="30011">Cron kifejezés</string>
+    <string id="30012">A videó könyvtár frissítése</string>
+    <string id="30013">A zene könyvtár frissítése</string>
+    <string id="30014">Csak tétlenség esetén fut</string>
 
     <!-- specific paths -->
     <string id="30020">Frissítés függő útvonal 1</string>

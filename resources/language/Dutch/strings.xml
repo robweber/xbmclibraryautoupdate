@@ -16,6 +16,9 @@
     <string id="30009">Uitgebreide timer gebruiken</string>
     <string id="30010">Tijd tussen bijwerken (in uren)</string>
     <string id="30011">Cron Expression</string>
+    <string id="30012">Video bibliotheek bijwerken</string>
+    <string id="30013">Muziek bibliotheek bijwerken</string>
+    <string id="30014">Alleen uitvoeren bij inactiviteit</string>
 
     <!-- specific paths -->
     <string id="30020">Bijwerken van specifieke loctaie 1</string>

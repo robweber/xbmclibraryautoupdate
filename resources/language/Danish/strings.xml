@@ -16,6 +16,8 @@
     <string id="30009">Brug avanceret timer</string>
     <string id="30010">Tidsinterval mellem opdateringer (timer)</string>
     <string id="30011">Cron-udtryk</string>
+    <string id="30012">Opdater videobibliotek</string>
+    <string id="30013">Opdater musikbibliotek</string>
 
     <!-- specific paths -->
     <string id="30020">Opdater specifik mappesti 1</string>
