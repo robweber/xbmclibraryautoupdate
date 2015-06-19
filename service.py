@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 import xbmc
 import xbmcgui
+import xbmcvfs
 import os
 import urllib2
 import resources.lib.utils as utils
@@ -96,7 +97,7 @@ class AutoUpdater:
                                     self.schedules[count] = cronJob
                                 
                                 elif(self.scanRunning() == True):
-                                    self.schedules[count].on_delay = True
+                                    self.schedules[count].next_run = now + 60
                                     utils.log("Waiting for other scan to finish")
                             else:
                                 utils.log("Network down, not running")
@@ -291,10 +292,22 @@ class AutoUpdater:
     def readLastRun(self):
         if(self.last_run == 0):
             #read it in from the settings
-            self.last_run = float(utils.getSetting('last_run'))
+            utils.log(xbmc.translatePath(utils.data_dir() + "last_run.txt"))
+            if(xbmcvfs.exists(xbmc.translatePath(utils.data_dir() + "last_run.txt"))):
+               runFile = xbmcvfs.File(xbmc.translatePath(utils.data_dir() + "last_run.txt"))
+
+               self.last_run = float(runFile.read())
+
+               runFile.close()
+            else:
+               self.last_run = 0
 
     def writeLastRun(self):
-        utils.setSetting('last_run',str(self.last_run))
+        runFile = xbmcvfs.File(xbmc.translatePath(utils.data_dir() + "last_run.txt"),'w')
+        runFile.write(str(self.last_run))
+        runFile.close()
+
+        self.showNotify(True)
 
     def scanRunning(self):
         #check if any type of scan is currently running
