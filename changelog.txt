@@ -1,3 +1,7 @@
+Version 0.9.7
+
+Fixed issue with stacked timers not executing
+
 Version 0.9.6
 
 updated language files from Transifex
