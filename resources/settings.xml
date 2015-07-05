@@ -5,6 +5,7 @@
 		<setting id="notify_next_run" type="bool" label="30006" default="true" />
 		<setting id="run_during_playback" type="bool" label="30007" default="false" />
 		<setting id="run_on_idle" type="bool" label="Only run when idle" default="false" />
+		<setting id="disable_manual_prompt" type="bool" label="30015" default="false" />
 	</category>
 	<category id="video_timer" label="30002">
 		<setting id="update_video" type="bool" label="30004" default="true" />
