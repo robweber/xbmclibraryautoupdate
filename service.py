@@ -8,6 +8,7 @@ import os
 import urllib2
 import resources.lib.utils as utils
 from resources.lib.croniter import croniter
+from resources.lib.cronclasses import CronSchedule, CustomPathFile
 
 class AutoUpdater:
     last_run = 0
@@ -16,6 +17,7 @@ class AutoUpdater:
     lock = False
     
     monitor = None
+    customPaths = None
     
     #setup the timer amounts
     timer_amounts = {}
@@ -30,7 +32,8 @@ class AutoUpdater:
         utils.check_data_dir()  #in case this directory does not exist yet
         self.monitor = UpdateMonitor(update_settings = self.createSchedules,after_scan = self.databaseUpdated)
         self.readLastRun()
-
+        self.customPaths = CustomPathFile()
+        
         #force and update on startup to create the array
         self.createSchedules(True)
         
@@ -65,7 +68,6 @@ class AutoUpdater:
             now = time.time()
         
             count = 0
-            tempLastRun = self.last_run
             while count < len(self.schedules):
                 cronJob = self.schedules[count]
             
@@ -207,8 +209,16 @@ class AutoUpdater:
                 
             self.schedules.append(aSchedule)
 
+        #read in any custom path options
+        for aJob in self.customPaths.getJobs():
+            utils.log("Creating timer " + aJob.name)
+            aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
+            self.schedules.append(aSchedule)
+
         #release the lock
         self.lock = False
+        
+        utils.log("Created " + str(len(self.schedules)) + " schedules",xbmc.LOGDEBUG)
         
         #show any notifications
         self.showNotify(not forceUpdate)
@@ -345,25 +355,6 @@ class AutoUpdater:
             pass
 
         return False
-
-class CronSchedule:
-    expression = ''
-    name = 'library'
-    timer_type = 'xbmc'
-    command = 'UpdateLibrary(video)'
-    next_run = 0
-    on_delay = False  #used to defer processing until after player finishes
-
-    def cleanLibrarySchedule(self,selectedIndex):
-        if(selectedIndex == 1):
-            #once per day
-            return "* * *"
-        elif (selectedIndex == 2):
-            #once per week
-            return "* * 0"
-        else:
-            #once per month
-            return "1 * *"
 
 class UpdateMonitor(xbmc.Monitor):
     update_settings = None
