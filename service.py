@@ -213,7 +213,7 @@ class AutoUpdater:
         for aJob in self.customPaths.getJobs():
             utils.log("Creating timer " + aJob.name)
             aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
-            self.schedules.append(aSchedule)
+            self.schedules.append(aJob)
 
         #release the lock
         self.lock = False
