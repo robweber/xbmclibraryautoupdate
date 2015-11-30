@@ -1,4 +1,4 @@
-The XBMC Library Updater will update your music and/or video libraries according to times specified by you. 
+The Library Updater will update your music and/or video libraries according to times specified by you. 
 
 Thanks to pkscuot for several small tweaks to this addon!
 
@@ -39,7 +39,7 @@ Cleaning the Music/Video Libraries is not enabled by default. If you choose to d
 
 Library to Clean - You can clean your video library, music library, or both.
 
-Verify Sources Before Clean - Frodo only! This feature is no longer needed with XBMC Gotham. This will verify all of your media paths (music or video) before running a clean operation. If any of these paths are inaccessible the clean operation will not continue and an error will be logged
+Verify Sources Before Clean - Frodo only! This feature is no longer needed with Kodi Gotham and beyond. This will verify all of your media paths (music or video) before running a clean operation. If any of these paths are inaccessible the clean operation will not continue and an error will be logged
 
 Prompt User Before Cleaning - you must confirm that you want to clean the library before it will happen. Really only useful for "After Update" as a condition. 
 
