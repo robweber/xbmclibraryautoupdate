@@ -1,3 +1,7 @@
+Version 0.9.9
+
+name change - finally removed XBMC
+
 Version 0.9.8
 
 added prompt disable setting for manual run
