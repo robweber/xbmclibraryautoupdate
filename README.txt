@@ -43,4 +43,20 @@ Verify Sources Before Clean - Frodo only! This feature is no longer needed with 
 
 Prompt User Before Cleaning - you must confirm that you want to clean the library before it will happen. Really only useful for "After Update" as a condition. 
 
-Frequency - There are several frequency options. "After Update" will run a clean immediately following a scan on the selected library. The Day/Week/Month options will schedule a clean task to happen. Cleaning the Video Library is hardcoded for midnight and the music library at 2am. Weekly updates occur on Sunday and Monthly updates occur on the first of each month - these values are hardcoded. You can also choose to enter a custom cron timer for video and music library cleaning. These work the same as any of the other cron timers for the other schedules. 
+Frequency - There are several frequency options. "After Update" will run a clean immediately following a scan on the selected library. The Day/Week/Month options will schedule a clean task to happen. Cleaning the Video Library is hardcoded for midnight and the music library at 2am. Weekly updates occur on Sunday and Monthly updates occur on the first of each month - these values are hardcoded. You can also choose to enter a custom cron timer for video and music library cleaning. These work the same as any of the other cron timers for the other schedules.
+
+Advanced Custom Paths:
+
+There are cases where the default number of custom video paths built in to the settings are not enough. In this case you can create a custom_paths.xml file that the program will read in on startup. This potentially gives you the option to make as many custom path schedules as you'd like. The format of the file is as follows: 
+
+<custom_paths>
+	<video>
+		<path name="path 1" cron="0 */5 * * *">C:\video</path>
+		<path name="path 2" cron="15 */10 * * 1-5">C:\video2</path>
+	</video>
+	<music>
+		<path name="music 1" cron = "0 0 * * *">smb://192.168.0.100/sharename/music</path>
+	</music>
+</custom_paths> 
+
+Save this file as "custom_paths.xml" in the addon_data folder for the service.libraryautoupdate addon. Make sure the paths are the same ones set in your Kodi sources file. If you don't have any music or video paths you don't need to put those nodes in to the file.  

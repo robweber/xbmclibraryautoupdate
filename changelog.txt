@@ -1,6 +1,7 @@
 Version 0.9.9
 
 name change - finally removed XBMC
+added custom paths via file - potentially unlimited
 
 Version 0.9.8
 
