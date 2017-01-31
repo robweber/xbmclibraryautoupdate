@@ -17,7 +17,6 @@ class AutoUpdater:
     lock = False
     
     monitor = None
-    customPaths = None
     
     #setup the timer amounts
     timer_amounts = {}
@@ -32,7 +31,6 @@ class AutoUpdater:
         utils.check_data_dir()  #in case this directory does not exist yet
         self.monitor = UpdateMonitor(update_settings = self.createSchedules,after_scan = self.databaseUpdated)
         self.readLastRun()
-        self.customPaths = CustomPathFile()
         
         #force and update on startup to create the array
         self.createSchedules(True)
@@ -176,41 +174,9 @@ class AutoUpdater:
                 
             self.schedules.append(aSchedule)
 
-        if(utils.getSetting('use_custom_1_path') == 'true'):
-            utils.log("Creating timer for Custom Path 1");
-            #create a custom video path schedule
-            aSchedule = CronSchedule()
-            aSchedule.name = utils.getString(30020)
-            aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_1_scan_path') + ')'
-            aSchedule.expression = self.checkTimer('custom_1')
-            aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                
-            self.schedules.append(aSchedule)
-
-        if(utils.getSetting('use_custom_2_path') == 'true'):
-            utils.log("Creating timer for Custom Path 2");
-            #create a custom video path schedule
-            aSchedule = CronSchedule()
-            aSchedule.name = utils.getString(30021)
-            aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_2_scan_path') + ')'
-            aSchedule.expression = self.checkTimer('custom_2')
-            aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                
-            self.schedules.append(aSchedule)
-
-        if(utils.getSetting('use_custom_3_path') == 'true'):
-            utils.log("Creating timer for Custom Path 3");
-            #create a custom video path schedule
-            aSchedule = CronSchedule()
-            aSchedule.name = utils.getString(30022)
-            aSchedule.command = 'UpdateLibrary(video,' + utils.getSetting('custom_3_scan_path') + ')'
-            aSchedule.expression = self.checkTimer('custom_3')
-            aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                
-            self.schedules.append(aSchedule)
-
         #read in any custom path options
-        for aJob in self.customPaths.getJobs():
+        customPaths = CustomPathFile()
+        for aJob in customPaths.getSchedules():
             utils.log("Creating timer " + aJob.name)
             aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
             self.schedules.append(aJob)
