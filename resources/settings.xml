@@ -14,26 +14,7 @@
 		<setting id="video_cron_expression" type="text" label="30011" visible="eq(-2,true)" enable="eq(-2,true) + eq(-3,true)" default="0 * * * *" />
 		<setting type="sep" />
 		<!-- custom paths -->
-		<setting id="run_custom_paths" type="action" action="RunScript(special://home/addons/service.libraryautoupdate/edit_custom_paths.py)" label="Edit Custom Paths" />
-		<!-- 
-		<setting id="use_custom_1_path" type="bool" label="30020" default="false" />
-		<setting id="custom_1_advanced_timer" type="bool" label="30009" default="false" enable="eq(-1,true)" visible="eq(-1,true)" />
-		<setting id="custom_1_timer" type="enum" values="1|2|4|6|12|24" label="30010" default="2" enable="!eq(-1,true) + eq(-2,true)" visible="!eq(-1,true) + eq(-2,true)" />
-		<setting id="custom_1_cron_expression" type="text" label="30011" enable="eq(-2,true) + eq(-3,true)" default="0 * * * *" visible="eq(-2,true) + eq(-3,true)" />
-		<setting id="custom_1_scan_path" type="folder" label="30023" enable="eq(-4,true)" visible="eq(-4,true)" />
-		
-		<setting id="use_custom_2_path" type="bool" label="30021" default="false" />
-		<setting id="custom_2_advanced_timer" type="bool" label="30009" default="false" enable="eq(-1,true)" visible="eq(-1,true)" />
-		<setting id="custom_2_timer" type="enum" values="1|2|4|6|12|24" label="30010" default="2" enable="!eq(-1,true) + eq(-2,true)" visible="!eq(-1,true) + eq(-2,true)" />
-		<setting id="custom_2_cron_expression" type="text" label="30011" enable="eq(-2,true) + eq(-3,true)" default="0 * * * *" visible="eq(-2,true) + eq(-3,true)" />
-		<setting id="custom_2_scan_path" type="folder" label="30023" enable="eq(-4,true)" visible="eq(-4,true)" />
-		
-		<setting id="use_custom_3_path" type="bool" label="30022" default="false" />
-		<setting id="custom_3_advanced_timer" type="bool" label="30009" default="false" enable="eq(-1,true)" visible="eq(-1,true)" />
-		<setting id="custom_3_timer" type="enum" values="1|2|4|6|12|24" label="30010" default="2" enable="!eq(-1,true) + eq(-2,true)" visible="!eq(-1,true) + eq(-2,true)" />
-		<setting id="custom_3_cron_expression" type="text" label="30011" enable="eq(-2,true) + eq(-3,true)" default="0 * * * *" visible="eq(-2,true) + eq(-3,true)" />
-		<setting id="custom_3_scan_path" type="folder" label="30023" enable="eq(-4,true)" visible="eq(-4,true)" />
-		-->
+		<setting id="run_custom_paths" type="action" action="RunScript(special://home/addons/service.libraryautoupdate/edit_custom_paths.py)" label="30020" />
 	</category>
 	<category id="music_timer" label="30003">
 		<setting id="update_music" type="bool" label="30005" default="false" />
