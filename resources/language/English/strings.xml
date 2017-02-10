@@ -26,7 +26,7 @@
     <string id="30021">Choose Action</string>
     <string id="30022">Delete this item?</string>
     <string id="30023">Browse for path</string>
-	<string id="30030">not used</string>
+	<string id="30030">This update broke custom paths, you must remake them</string>
 
     <!-- disclaimer -->
     <string id="30031">Video Paths Disclaimer</string>

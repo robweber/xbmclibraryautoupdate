@@ -10,6 +10,8 @@ import resources.lib.utils as utils
 from resources.lib.croniter import croniter
 from resources.lib.cronclasses import CronSchedule, CustomPathFile
 
+UPGRADE_INT = 1  #to keep track of any upgrade notifications
+
 class AutoUpdater:
     last_run = 0
     sleep_time = 500
@@ -44,7 +46,14 @@ class AutoUpdater:
                     #we missed at least one update, fix this
                     self.schedules[count].next_run = time.time() + int(utils.getSetting("startup_delay")) * 60
                 count = count + 1
-                
+
+
+        #display upgrade messages if they exist
+        if(int(utils.getSetting('upgrade_notes')) < UPGRADE_INT):
+            xbmcgui.Dialog().ok(utils.getString(30000),utils.getString(30030))
+            utils.setSetting('upgrade_notes',str(UPGRADE_INT))
+            
+        
         #program has started, check if we should show a notification
         self.showNotify()
 
