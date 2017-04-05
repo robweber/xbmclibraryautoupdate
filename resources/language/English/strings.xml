@@ -21,14 +21,14 @@
     <string id="30014">Only run when idle</string>
 	<string id="30015">Disable manual run prompt</string>
 
-    <!-- specific paths -->
-    <string id="30020">Update Specific Path 1</string>
-    <string id="30021">Update Specific Path 2</string>
-    <string id="30022">Update Specific Path 3</string>
-    <string id="30023">Video Path</string>
+    <!-- custom paths -->
+    <string id="30020">Edit Custom Paths</string>
+    <string id="30021">Choose Action</string>
+    <string id="30022">Delete this item?</string>
+    <string id="30023">Browse for path</string>
+	<string id="30030">This update broke custom paths, you must remake them</string>
 
     <!-- disclaimer -->
-    <string id="30030">Read Disclaimer</string>
     <string id="30031">Video Paths Disclaimer</string>
     <string id="30032">Path must already be a video source with content</string>
     <string id="30033">Path must match source path exactly to scan</string>
