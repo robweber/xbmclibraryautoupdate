@@ -1,6 +1,7 @@
 Version 1.0.1
 
 updated the way custom paths are handled
+moved to po files for strings
 
 Version 1.0.0
 
