@@ -172,6 +172,12 @@ class AutoUpdater:
                 
             self.schedules.append(aSchedule)
 
+            customPaths = CustomPathFile('video')
+            for aJob in customPaths.getSchedules():
+                utils.log("Creating timer " + aJob.name)
+                aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
+                self.schedules.append(aJob)
+
         if(utils.getSetting('update_music') == 'true'):
             utils.log("Creating timer for Music Library");
             #create the music schedule
@@ -183,12 +189,13 @@ class AutoUpdater:
                 
             self.schedules.append(aSchedule)
 
-        #read in any custom path options
-        customPaths = CustomPathFile()
-        for aJob in customPaths.getSchedules():
-            utils.log("Creating timer " + aJob.name)
-            aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
-            self.schedules.append(aJob)
+
+            #read in any custom path options
+            customPaths = CustomPathFile('music')
+            for aJob in customPaths.getSchedules():
+                utils.log("Creating timer " + aJob.name)
+                aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
+                self.schedules.append(aJob)
 
         #release the lock
         self.lock = False

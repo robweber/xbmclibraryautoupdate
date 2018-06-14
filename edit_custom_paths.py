@@ -1,3 +1,5 @@
+import sys
+import urlparse
 import xbmcgui
 import resources.lib.utils as utils
 from resources.lib.cronclasses import CronSchedule, CustomPathFile
@@ -6,20 +8,20 @@ dialog = xbmcgui.Dialog()
 #show the disclaimer - do this every time
 dialog.ok(utils.getString(30031),"",utils.getString(30032),utils.getString(30033))
 
-def selectPath():
-    path = {'expression':'0 */2 * * *'}
+def selectPath(contentType):
+    path = {'expression':'0 */2 * * *','content':contentType}
     
     #select path to scan
-    path['path'] = dialog.browse(0,utils.getString(30023),'video')
+    path['path'] = dialog.browse(0,utils.getString(30023),contentType)
 
     #create expression
     path['expression'] = dialog.input(utils.getString(30056),path['expression'])
     
     return path
 
-def showMainScreen():
+def showMainScreen(contentType):
     exitCondition = ""
-    customPaths = CustomPathFile()
+    customPaths = CustomPathFile(contentType)
     
     while(exitCondition != -1):
         #load the custom paths
@@ -33,15 +35,30 @@ def showMainScreen():
         
         if(exitCondition >= 0):
             if(exitCondition == 0):
-                path = selectPath()
+                path = selectPath(contentType)
 
                 customPaths.addPath(path)
             else:
                 #delete?
                 if(dialog.yesno(heading=utils.getString(30021),line1=utils.getString(30022))):
-                    #delete this path - subtract one because of "add" item
-                    customPaths.deletePath(exitCondition -1)
-            
+                    #get the id of the selected item
+                    aPath = customPaths.getPaths()[exitCondition -1]
+                    #delete that id
+                    customPaths.deletePath(aPath['id'])
 
+def get_params():
+    param = {}
+    try:
+        for i in sys.argv:
+            args = i
+            if(args.startswith('?')):
+                args = args[1:]
+            param.update(dict(urlparse.parse_qsl(args)))
+    except:
+        pass
+    return param
 
-showMainScreen()    
+#send type (video/music) to editor
+params = get_params()
+
+showMainScreen(params['type'])    
