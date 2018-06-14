@@ -8,9 +8,14 @@ class CronSchedule:
     expression = ''
     name = 'library'
     timer_type = 'xbmc'
-    command = 'UpdateLibrary(video)'
+    command = {'method':'VideoLibrary.Scan','params':{}}
     next_run = 0
     on_delay = False  #used to defer processing until after player finishes
+
+    def executeCommand(self):
+        jsonCommand = {'jsonrpc':'2.0','method':self.command['method'],'params':self.command['params'],'id':44}
+        utils.log(json.dumps(jsonCommand))
+        xbmc.executeJSONRPC(json.dumps(jsonCommand))
 
     def cleanLibrarySchedule(self,selectedIndex):
         if(selectedIndex == 1):
@@ -82,7 +87,7 @@ class CustomPathFile:
         
         aSchedule = CronSchedule()
         aSchedule.name = aPath['path']
-        aSchedule.command = 'UpdateLibrary(video,' + aPath['path'] + ')'
+        aSchedule.command = {'method':'VideoLibrary.Scan','params':{'directory':aPath['path']}}
         aSchedule.expression = aPath['expression']
         
         return aSchedule

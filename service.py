@@ -98,9 +98,9 @@ class AutoUpdater:
                                     utils.log(cronJob.name)
 
                                     if(cronJob.timer_type == 'xbmc'):
-                                        xbmc.executebuiltin(cronJob.command)
+                                        cronJob.executeCommand()
                                     else:
-                                        self.cleanLibrary(cronJob.command)
+                                        self.cleanLibrary(cronJob)
 
                                     #find the next run time
                                     cronJob.next_run = self.calcNextRun(cronJob.expression,now)
@@ -137,7 +137,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30048)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command = 'video'
+                    aSchedule.command['method'] = 'VideoLibrary.Clean'
                     if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_video_cron_expression")
                     else:
@@ -151,7 +151,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30049)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command = 'music'
+                    aSchedule.command['method'] = 'AudioLibrary.Clean'
                     if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_music_cron_expression")
                     else:
@@ -166,7 +166,7 @@ class AutoUpdater:
             #create the video schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30012)
-            aSchedule.command = 'UpdateLibrary(video)'
+            aSchedule.command = {'method':'VideoLibrary.Scan','params':{}}
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
                 
@@ -177,7 +177,7 @@ class AutoUpdater:
             #create the music schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30013)
-            aSchedule.command = 'UpdateLibrary(music)'
+            aSchedule.command = {'method':'AudioLibrary.Scan','params':{}}
             aSchedule.expression = self.checkTimer('music')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
                 
@@ -260,7 +260,7 @@ class AutoUpdater:
         return result
         
 
-    def cleanLibrary(self,media_type):
+    def cleanLibrary(self,cronJob):
         #check if we should verify with user first
         if(utils.getSetting('user_confirm_clean') == 'true'):
             #user can decide 'no' here and exit this
@@ -270,7 +270,7 @@ class AutoUpdater:
                 
         #run the clean operation
         utils.log("Cleaning Database")
-        xbmc.executebuiltin("CleanLibrary(" + media_type + ")")
+        cronJob.executeCommand()
 
         #write last run time, will trigger notifications
         self.writeLastRun()
