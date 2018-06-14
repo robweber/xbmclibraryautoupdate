@@ -15,7 +15,7 @@
 		<setting id="video_cron_expression" type="text" label="30011" visible="eq(-2,true)" enable="eq(-2,true) + eq(-3,true)" default="0 * * * *" />
 		<setting type="sep" />
 		<!-- custom paths -->
-		<setting id="run_custom_paths" type="action" action="RunScript(special://home/addons/service.libraryautoupdate/edit_custom_paths.py)" label="30020" />
+		<setting id="run_custom_paths" type="action" action="RunScript(special://home/addons/service.libraryautoupdate/edit_custom_paths.py)" label="30020" enable="eq(-5,true)" />
 	</category>
 	<category id="music_timer" label="30003">
 		<setting id="update_music" type="bool" label="30005" default="false" />
