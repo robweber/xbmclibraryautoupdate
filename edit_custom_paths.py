@@ -13,7 +13,11 @@ def selectPath():
     path['path'] = dialog.browse(0,utils.getString(30023),'video')
 
     #create expression
-    path['expression'] = dialog.input(utils.getString(30056),path['expression'])
+    if(path['path'] != ''):
+        path['expression'] = dialog.input(utils.getString(30056),path['expression'])
+    else:
+        #return nothing if dialog closed
+        return None
     
     return path
 
@@ -35,7 +39,9 @@ def showMainScreen():
             if(exitCondition == 0):
                 path = selectPath()
 
-                customPaths.addPath(path)
+                #could return None if dialog canceled
+                if(path != None):
+                    customPaths.addPath(path)
             else:
                 #delete?
                 if(dialog.yesno(heading=utils.getString(30021),line1=utils.getString(30022))):
