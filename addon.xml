@@ -76,5 +76,10 @@
     <license>The MIT License</license>
     <forum>http://forum.xbmc.org/showthread.php?tid=119520</forum>
     <source>https://github.com/robweber/xbmclibraryautoupdate</source>
+	<assets>
+		<icon>resources/images/icon.png</icon>
+	</assets>
+	<news>Version 1.0.3
+- gracefully cancel out of custom dialog box</news>
   </extension>
 </addon>
