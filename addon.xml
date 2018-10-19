@@ -80,6 +80,7 @@
 		<icon>resources/images/icon.png</icon>
 	</assets>
 	<news>Version 1.0.3
-- gracefully cancel out of custom dialog box</news>
+- gracefully cancel out of custom dialog box
+- replace builtin with json commands</news>
   </extension>
 </addon>
