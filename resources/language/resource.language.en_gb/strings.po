@@ -123,8 +123,8 @@ msgid "Video Paths Disclaimer"
 msgstr "Video Paths Disclaimer"
 
 msgctxt "#30032"
-msgid "Path must already be a video source with content"
-msgstr "Path must already be a video source with content"
+msgid "Path must already be a valid source with content"
+msgstr "Path must already be a valid source with content"
 
 msgctxt "#30033"
 msgid "Path must match source path exactly to scan"
