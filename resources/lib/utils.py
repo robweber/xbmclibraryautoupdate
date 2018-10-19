@@ -20,7 +20,7 @@ def log(message,loglevel=xbmc.LOGNOTICE):
     xbmc.log(encode(__addon_id__ + "-" + __Addon.getAddonInfo('version') + " : " + message),level=loglevel)
 
 def showNotification(title,message):
-    xbmcgui.Dialog().notification(encode(getString(30000)),encode(message),time=4000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/images/icon.png"),sound=False)
+    xbmcgui.Dialog().notification(encode(getString(30000)),encode(message),time=4000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/media/icon.png"),sound=False)
 
 def setSetting(name,value):
     __Addon.setSetting(name,value)
