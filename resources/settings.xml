@@ -5,6 +5,7 @@
 		<setting id="notify_next_run" type="bool" label="30006" default="true" />
 		<setting id="run_during_playback" type="bool" label="30007" default="false" />
 		<setting id="run_on_idle" type="bool" label="30014" default="false" />
+		<setting id="check_sources" type="bool" label="Check Sources Before Scan" default="false" />
 		<setting id="disable_manual_prompt" type="bool" label="30015" default="false" />
 		<setting id="upgrade_notes" type="number" label="upgrade_notes" visible="false" default="0" />
 	</category>
