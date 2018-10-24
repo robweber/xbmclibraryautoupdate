@@ -99,6 +99,10 @@ msgctxt "#30015"
 msgid "Disable manual run prompt"
 msgstr "Disable manual run prompt"
 
+msgctxt "#30016"
+msgid "Cron syntax %s is incorrect, defaulting to 2 hours"
+msgstr "Cron syntax %s is incorrect, defaulting to 2 hours"
+
 msgctxt "#30020"
 msgid "Update Specific Path 1"
 msgstr "Update Specific Path 1"
