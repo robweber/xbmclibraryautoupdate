@@ -218,11 +218,20 @@ class AutoUpdater:
         return result
     
     def calcNextRun(self,cronExp,startTime):
+        nextRun = -1
         
-        #create croniter for this expression
-        cron = croniter(cronExp,startTime)
-        nextRun = cron.get_next(float)
+        try:        
+            #create croniter for this expression
+            cron = croniter(cronExp,startTime)
+            nextRun = cron.get_next(float)
+        except ValueError:
+            #error in syntax
+            xbmcgui.Dialog().ok(utils.getString(30000),utils.getString(30016) % cronExp)
+            utils.log('Cron syntax error %s' % cronExp,xbmc.LOGDEBUG)
 
+            #rerun with a valid syntax
+            nextRun = self.calcNextRun('0 */2 * * *',startTime)
+            
         return nextRun
 
     def showNotify(self,displayToScreen = True):
