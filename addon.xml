@@ -81,6 +81,7 @@
 	</assets>
 	<news>Version 1.0.3
 - gracefully cancel out of custom dialog box
-- replace builtin with json commands</news>
+- replace builtin with json commands
+- catch cron syntax errors</news>
   </extension>
 </addon>
