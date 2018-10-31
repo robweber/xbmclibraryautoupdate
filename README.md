@@ -6,15 +6,16 @@ _Thanks to pkscuot for several small tweaks to this addon!_
 
 ### General Settings: 
 
-* Startup Delay - if an update should run on startup (dependant on the time the last update has ran) this will delay it from running for a few minutes to allow other XBMC process to function. 
+* Startup Delay - if an update should run on startup (dependent on the time the last update has ran) this will delay it from running for a few minutes to allow other XBMC process to function. 
 * Show Notifications - shows notifications when the updater will run again
-* Run During Playback - should the addon run when you are playing media (yes/no)
+* Run During Playback - should the addon run a scheduled scan when you are playing media (yes/no)
 * Only run when idle - restricts the scanning process to when the screensaver is active
+* Check if sources exist before scan - checks if the sources are online before starting the scan process. For single source scans it will check only that source. 
 * Disable Manual Run Prompt - disables the dialog box when selecting Manual Run and just goes right to the libary update
 
 ### Video Settings: 
 
-Enabling this will turn on scanning for the Video Library. This is the same as calling "Update Library" from within the Video menus of Kodi. There are a few options you can tweak regarding how often you want the scanner to run. 
+Enabling this will turn on scanning for the Video Library. This is the same as calling "Update Library" from within the Video menus of Kodi. There are a few options you can tweak regarding how often you want the scanner to run. Read the section on Timer Options for more information. 
 
 __Custom Paths__
 
@@ -22,7 +23,7 @@ Custom paths are a special advanced feature for the Video library. It allows you
 
 ### Music Settings
 
-Enabled this will turn on scanning for the Music Library. This is the same as calling "Update Library" from within the Music menus of Kodi. There are a few options you can tweak regarding how often you want the scanner to run. 
+Enabled this will turn on scanning for the Music Library. This is the same as calling "Update Library" from within the Music menus of Kodi. There are a few options you can tweak regarding how often you want the scanner to run. Read the section on Timer Options for more information. 
 
 ### Timer Options: 
 
