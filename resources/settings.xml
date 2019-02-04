@@ -7,7 +7,7 @@
 		<setting id="run_on_idle" type="bool" label="30014" default="false" />
 		<setting id="check_sources" type="bool" label="30017" default="false" />
 		<setting id="disable_manual_prompt" type="bool" label="30015" default="false" />
-		<setting id="upgrade_notes" type="number" label="upgrade_notes" visible="false" default="0" />
+		<setting id="upgrade_notes" type="number" label="upgrade_notes" visible="false" default="1" />
 	</category>
 	<category id="video_timer" label="30002">
 		<setting id="update_video" type="bool" label="30004" default="true" />
