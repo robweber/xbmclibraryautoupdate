@@ -6,6 +6,7 @@ import xbmcgui
 import xbmcvfs
 import os
 import urllib2
+import json
 import resources.lib.utils as utils
 from resources.lib.croniter import croniter
 from resources.lib.cronclasses import CronSchedule, CustomPathFile
@@ -83,8 +84,8 @@ class AutoUpdater:
 
                         if(utils.getSetting('run_on_idle') == 'false' or (utils.getSetting('run_on_idle') == 'true' and self.monitor.screensaver_running)):
                             
-                            #check for valid network connection
-                            if(self._networkUp()):
+                            #check for valid network connection - check sources if setting enabled
+                            if(self._networkUp() and (utils.getSetting('check_sources') == 'false' or (utils.getSetting('check_sources') == 'true' and self._checkSources(cronJob)))):
                             
                                 #check if this scan was delayed due to playback
                                 if(cronJob.on_delay == True):
@@ -169,7 +170,6 @@ class AutoUpdater:
             aSchedule.command = {'method':'VideoLibrary.Scan','params':{}}
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
-                
             self.schedules.append(aSchedule)
 
             customPaths = CustomPathFile('video')
@@ -338,7 +338,6 @@ class AutoUpdater:
         self.writeLastRun()
 
     def _networkUp(self):
-        utils.log("Starting network check")
         try:
             response = urllib2.urlopen('http://www.google.com',timeout=1)
             return True
@@ -346,6 +345,59 @@ class AutoUpdater:
             pass
 
         return False
+
+    def _checkSources(self,aJob):
+        result = False
+        mediaType = 'video'
+        
+        if(aJob.command['method'] == 'VideoLibrary.Scan' or aJob.command['method'] == 'AudioLibrary.Scan'):
+
+            #set the media type
+            if(aJob.command['method'] != 'VideoLibrary.Scan'):
+                mediaType = 'music'
+            
+            if(aJob.command['params'].has_key('directory')):
+                #we have a specific path to check
+                result = self._sourceExists(aJob.command['params']['directory'])
+            else:
+                #check every video path
+                response = json.loads(xbmc.executeJSONRPC(json.dumps({'jsonrpc':'2.0','method':'Files.GetSources','params':{'media':mediaType},'id':44})))
+
+                #make sure we got something
+                if(response.has_key('result')):
+                    for source in response['result']['sources']:
+                        if(not self._sourceExists(source['file'])):
+                            #one failure fails the whole thing
+                            return False
+                    #if we make it this far we got them all
+                    result = True
+        else:
+            #must be a cleaning, skip this check since Kodi will do it
+            result = True
+    
+        return result
+
+    def _sourceExists(self,source):
+        utils.log("checking: " + source)
+        #check if this is a multipath source
+        if(source.startswith('multipath://')):
+            #code adapted from xbmc source MultiPathDirectory.cpp
+            source = source[12:]
+            
+            if(source[-1:] == "/"):
+                source = source[:-1]
+            splitSource = source.split('/')
+            if(len(splitSource) > 0):
+                for aSource in splitSource:
+                    if not xbmcvfs.exists(urllib2.unquote(aSource)):
+                        #if one source in the multi does not exist, return false
+                        return False
+                #if we make it here they all exist
+                return True
+            else:
+                return False
+        else:
+            return xbmcvfs.exists(source)
 
 class UpdateMonitor(xbmc.Monitor):
     update_settings = None
