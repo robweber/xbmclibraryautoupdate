@@ -1,3 +1,7 @@
+Version 1.0.4
+
+make sure manual run always works
+
 Version 1.0.3
 
 gracefully cancel out of custom dialog box
