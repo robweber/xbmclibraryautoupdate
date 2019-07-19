@@ -79,10 +79,9 @@
 	<assets>
 		<icon>resources/media/icon.png</icon>
 	</assets>
-	<news>Version 1.0.3
-- gracefully cancel out of custom dialog box
-- replace builtin with json commands
-- catch cron syntax errors
-- option to check sources before scan</news>
+	<news>Version 1.0.4
+- make sure manual run always works
+- make next run times more readable (I think)
+- use showdialogs on JSON commands based on Show Notifications option</news>
   </extension>
 </addon>
