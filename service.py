@@ -245,7 +245,7 @@ class AutoUpdater:
         inWords = self.nextRunCountdown(next_run_time.next_run)
         #show the notification (if applicable)
         if(next_run_time.next_run > time.time() and utils.getSetting('notify_next_run') == 'true' and displayToScreen == True):
-            utils.showNotification(utils.getString(30000),next_run_time.name + " - " + inWords)
+            utils.showNotification(utils.getString(30000),inWords + " - " + next_run_time.name)
                                    
         return inWords    
 
