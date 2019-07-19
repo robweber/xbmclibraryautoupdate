@@ -8,7 +8,7 @@ class CronSchedule:
     expression = ''
     name = 'library'
     timer_type = 'xbmc'
-    command = {'method':'VideoLibrary.Scan','params':{}}
+    command = {'method':'VideoLibrary.Scan','params':{'showdialogs':True}}
     next_run = 0
     on_delay = False  #used to defer processing until after player finishes
 
@@ -40,13 +40,13 @@ class CustomPathFile:
         #try and read in the custom file
         self._readFile()
 
-    def getSchedules(self):
+    def getSchedules(self,showDialogs=True):
         schedules = []
 
         #create schedules from the path information
         for aPath in self.paths:
             if(self.contentType == aPath['content']):
-                schedules.append(self._createSchedule(aPath))
+                schedules.append(self._createSchedule(aPath,showDialogs))
 
         return schedules
 
@@ -128,16 +128,16 @@ class CustomPathFile:
             self._writeFile()
         
     
-    def _createSchedule(self,aPath):
+    def _createSchedule(self,aPath,showDialogs):
         
         aSchedule = CronSchedule()
         aSchedule.name = aPath['path']
 
         #command depends on content type
         if(aPath['content'] == 'video'):
-            aSchedule.command = {'method':'VideoLibrary.Scan','params':{'directory':aPath['path']}}
+            aSchedule.command = {'method':'VideoLibrary.Scan','params':{'directory':aPath['path'],'showdialogs':showDialogs}}
         else:
-            aSchedule.command = {'method':'AudioLibrary.Scan','params':{'directory':aPath['path']}}
+            aSchedule.command = {'method':'AudioLibrary.Scan','params':{'directory':aPath['path'],'showdialogs':showDialogs}}
 
         aSchedule.expression = aPath['expression']
         

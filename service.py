@@ -129,7 +129,8 @@ class AutoUpdater:
         utils.log("update timers")
         self.lock = True   #lock so the eval portion does not run
         self.schedules = []
-            
+        showDialogs = utils.getSetting('notify_next_run') == 'true' #if the user has selected to show dialogs for library operations
+        
         if(utils.getSetting('clean_libraries') == 'true'):
             #create clean schedule (if needed)
             if(int(utils.getSetting("clean_timer")) != 0):
@@ -139,7 +140,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30048)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command['method'] = 'VideoLibrary.Clean'
+                    aSchedule.command = {'method':'VideoLibrary.Clean','params':{'showdialogs':showDialogs}}
                     if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_video_cron_expression")
                     else:
@@ -153,7 +154,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30049)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command['method'] = 'AudioLibrary.Clean'
+                    aSchedule.command = {'method':'AudioLibrary.Clean','params':{'showdialogs':showDialogs}}
                     if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_music_cron_expression")
                     else:
@@ -168,13 +169,13 @@ class AutoUpdater:
             #create the video schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30012)
-            aSchedule.command = {'method':'VideoLibrary.Scan','params':{}}
+            aSchedule.command = {'method':'VideoLibrary.Scan','params':{'showdialogs':showDialogs}}
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
             self.schedules.append(aSchedule)
 
             customPaths = CustomPathFile('video')
-            for aJob in customPaths.getSchedules():
+            for aJob in customPaths.getSchedules(showDialogs):
                 utils.log("Creating timer " + aJob.name)
                 aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
                 self.schedules.append(aJob)
@@ -184,7 +185,7 @@ class AutoUpdater:
             #create the music schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30013)
-            aSchedule.command = {'method':'AudioLibrary.Scan','params':{}}
+            aSchedule.command = {'method':'AudioLibrary.Scan','params':{'showdialogs':showDialogs}}
             aSchedule.expression = self.checkTimer('music')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
                 
@@ -193,7 +194,7 @@ class AutoUpdater:
 
             #read in any custom path options
             customPaths = CustomPathFile('music')
-            for aJob in customPaths.getSchedules():
+            for aJob in customPaths.getSchedules(showDialogs):
                 utils.log("Creating timer " + aJob.name)
                 aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
                 self.schedules.append(aJob)

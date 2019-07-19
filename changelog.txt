@@ -1,6 +1,8 @@
 Version 1.0.4
 
 make sure manual run always works
+make next run times more readable (I think)
+use showdialogs on JSON commands in reference to Show Notifications option
 
 Version 1.0.3
 
