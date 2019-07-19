@@ -71,7 +71,7 @@ class AutoUpdater:
         #clean up monitor on exit
         del self.monitor
 
-    def evalSchedules(self):
+    def evalSchedules(self, manual=False):
         if(not self.lock):
             now = time.time()
         
@@ -82,7 +82,8 @@ class AutoUpdater:
                 if(cronJob.next_run <= now):
                     if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
 
-                        if(utils.getSetting('run_on_idle') == 'false' or (utils.getSetting('run_on_idle') == 'true' and self.monitor.screensaver_running)):
+                        #check if run on idle is checked and screen is idle - disable this on manual run
+                        if(utils.getSetting('run_on_idle') == 'false' or (utils.getSetting('run_on_idle') == 'true' and (self.monitor.screensaver_running or manual))):
                             
                             #check for valid network connection - check sources if setting enabled
                             if(self._networkUp() and (utils.getSetting('check_sources') == 'false' or (utils.getSetting('check_sources') == 'true' and self._checkSources(cronJob)))):
