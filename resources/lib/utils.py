@@ -23,10 +23,10 @@ def showNotification(title,message):
     xbmcgui.Dialog().notification(encode(getString(30000)),encode(message),time=5000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/media/icon.png"),sound=False)
 
 def setSetting(name,value):
-    __Addon.setSetting(name,value)
+    __Addon.setSettingString(name,value)
 
 def getSetting(name):
-    return __Addon.getSettingString(name)
+    return __Addon.getSetting(name)
 
 def getSettingBool(name):
     return __Addon.getSettingBool(name)
