@@ -30,7 +30,7 @@
 	<category id="clean_timer" label="30040">
 		<setting id="clean_libraries" type="bool" label="30041" default="false" />
 		<setting id="library_to_clean" type="enum" lvalues="30055|30002|30003" label="30054" default="0" enable="eq(-1,true)" />
-		<setting id="user_confirm_clean" type="bool" label="30051" default="false" enable="eq(-2,true)" />
+		<setting id="user_confirm_clean" type="bool" label="30051" default="false" enable="eq(-2,true) + !eq(1,0)" />
 		<setting id="clean_timer" type="enum" lvalues="30044|30045|30046|30047|30011" label="30043" default="0" enable="eq(-3,true)" />
 		<setting id="clean_video_cron_expression" type="text" label="30056" default="0 0 * * *" enable="eq(-4,true)" visible="eq(-1,4)" />
 		<setting id="clean_music_cron_expression" type="text" label="30057" default="0 2 * * *" enable="eq(-5,true)" visible="eq(-2,4)" />

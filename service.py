@@ -279,8 +279,8 @@ class AutoUpdater:
         
 
     def cleanLibrary(self,cronJob):
-        #check if we should verify with user first
-        if(utils.getSetting('user_confirm_clean') == 'true'):
+        #check if we should verify with user first unless we're on 'clean after update'
+        if(utils.getSetting('user_confirm_clean') == 'true' and int(utils.getSetting('clean_timer')) != 0):
             #user can decide 'no' here and exit this
             runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),line2=utils.getString(30053),autoclose=15000)
             if(not runClean):
@@ -325,16 +325,23 @@ class AutoUpdater:
             return False
         
     def databaseUpdated(self,database):
+	showDialogs = utils.getSetting('notify_next_run') == 'true' #if the user has selected to show dialogs for library operations
         #check if we should clean the library
         if(utils.getSetting('clean_libraries') == 'true'):
             #check if should update while playing media
             if(xbmc.Player().isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
                 if(int(utils.getSetting("clean_timer")) == 0):
                     #check if we should clean music, or video
+		    aJob = CronSchedule()
+                    aJob.name = utils.getString(30048)
+                    aJob.timer_type = utils.__addon_id__
                     if((utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1') and database == 'video'):
-                        self.cleanLibrary(database)
+			#create the clean job schedule
+                        aJob.command = {'method':'VideoLibrary.Clean','params':{'showdialogs':showDialogs}}
                     if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
-                        self.cleanLibrary(database)
+			aJob.command = {'method':'AudioLibrary.Clean','params':{'showdialogs':showDialogs}}
+
+                    self.cleanLibrary(aJob)
 
         #writeLastRun will trigger notifications
         self.writeLastRun()
