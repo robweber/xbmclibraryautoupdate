@@ -82,6 +82,7 @@
 	<news>Version 1.0.4
 - make sure manual run always works
 - make next run times more readable (I think)
-- use showdialogs on JSON commands based on Show Notifications option</news>
+- use showdialogs on JSON commands based on Show Notifications option
+- fix clean after update error</news>
   </extension>
 </addon>
