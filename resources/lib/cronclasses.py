@@ -1,4 +1,3 @@
-import xml.dom.minidom
 import json
 from . import utils as utils
 import xbmcvfs

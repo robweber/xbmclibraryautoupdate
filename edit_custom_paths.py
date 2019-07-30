@@ -2,7 +2,7 @@ import sys
 import urlparse
 import xbmcgui
 import resources.lib.utils as utils
-from resources.lib.cronclasses import CronSchedule, CustomPathFile
+from resources.lib.cronclasses import CustomPathFile
 dialog = xbmcgui.Dialog()
 
 #show the disclaimer - do this every time

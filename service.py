@@ -4,7 +4,6 @@ from datetime import datetime
 import xbmc
 import xbmcgui
 import xbmcvfs
-import os
 import urllib2
 import json
 import resources.lib.utils as utils
