@@ -26,8 +26,14 @@ def setSetting(name,value):
     __Addon.setSetting(name,value)
 
 def getSetting(name):
-    return __Addon.getSetting(name)
-    
+    return __Addon.getSettingString(name)
+
+def getSettingBool(name):
+    return __Addon.getSettingBool(name)
+
+def getSettingInt(name):
+    return __Addon.getSettingInt(name)
+
 def getString(string_id):
     return __Addon.getLocalizedString(string_id)
 
