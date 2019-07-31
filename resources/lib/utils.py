@@ -29,7 +29,7 @@ def getSetting(name):
     return __Addon.getSetting(name)
 
 def getSettingBool(name):
-    return __Addon.getSettingBool(name)
+    return bool(__Addon.getSettingBool(name))
 
 def getSettingInt(name):
     return __Addon.getSettingInt(name)
