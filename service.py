@@ -39,17 +39,17 @@ class AutoUpdater:
         
     def runProgram(self):
         #a one-time catch for the startup delay
-        if(utils.getSettingInt("startup_delay") != 0):
+        if(int(utils.getSetting("startup_delay")) != 0):
             count = 0
             while count < len(self.schedules):
                 if(time.time() > self.schedules[count].next_run):
                     #we missed at least one update, fix this
-                    self.schedules[count].next_run = time.time() + utils.getSettingInt("startup_delay") * 60
+                    self.schedules[count].next_run = time.time() + int(utils.getSetting("startup_delay")) * 60
                 count = count + 1
 
 
         #display upgrade messages if they exist
-        if(utils.getSettingInt('upgrade_notes') < UPGRADE_INT):
+        if(int(utils.getSetting('upgrade_notes')) < UPGRADE_INT):
             xbmcgui.Dialog().ok(utils.getString(30000),utils.getString(30030))
             utils.setSetting('upgrade_notes',str(UPGRADE_INT))
             
@@ -132,32 +132,32 @@ class AutoUpdater:
         
         if(utils.getSettingBool('clean_libraries')):
             #create clean schedule (if needed)
-            if(utils.getSettingInt("clean_timer") != 0):
+            if(int(utils.getSetting("clean_timer")) != 0):
                     
-                if(utils.getSettingInt('library_to_clean') == 0 or utils.getSettingInt('library_to_clean') == 1):
+                if(utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1'):
                     #video clean schedule starts at 12am by default
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30048)
                     aSchedule.timer_type = utils.__addon_id__
                     aSchedule.command = {'method':'VideoLibrary.Clean','params':{'showdialogs':showDialogs}}
-                    if(utils.getSettingInt("clean_timer") == 4):
+                    if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_video_cron_expression")
                     else:
-                        aSchedule.expression = "0 0 " + aSchedule.cleanLibrarySchedule(utils.getSettingInt("clean_timer"))
+                        aSchedule.expression = "0 0 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                     aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
 
                     self.schedules.append(aSchedule)
                         
-                if(utils.getSettingInt('library_to_clean') == 2 or utils.getSettingInt('library_to_clean') == 0):
+                if(utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0'):
                     #music clean schedule starts at 2am by default
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30049)
                     aSchedule.timer_type = utils.__addon_id__
                     aSchedule.command = {'method':'AudioLibrary.Clean','params':{'showdialogs':showDialogs}}
-                    if(utils.getSettingInt("clean_timer") == 4):
+                    if(int(utils.getSetting("clean_timer")) == 4):
                         aSchedule.expression = utils.getSetting("clean_music_cron_expression")
                     else:
-                        aSchedule.expression = "0 2 " + aSchedule.cleanLibrarySchedule(utils.getSettingInt("clean_timer"))
+                        aSchedule.expression = "0 2 " + aSchedule.cleanLibrarySchedule(int(utils.getSetting("clean_timer")))
                     aSchedule.next_run = self.calcNextRun(aSchedule.expression,time.time())
     
                     self.schedules.append(aSchedule)
@@ -279,7 +279,7 @@ class AutoUpdater:
 
     def cleanLibrary(self,cronJob):
         #check if we should verify with user first unless we're on 'clean after update'
-        if(utils.getSettingBool('user_confirm_clean') and utils.getSettingInt('clean_timer') != 0):
+        if(utils.getSettingBool('user_confirm_clean') and int(utils.getSetting('clean_timer')) != 0):
             #user can decide 'no' here and exit this
             runClean = xbmcgui.Dialog().yesno(utils.getString(30000),utils.getString(30052),line2=utils.getString(30053),autoclose=15000)
             if(not runClean):
@@ -324,21 +324,21 @@ class AutoUpdater:
             return False
         
     def databaseUpdated(self,database):
-        showDialogs = utils.getSettingBool('notify_next_run') #if the user has selected to show dialogs for library operations
+	showDialogs = utils.getSettingBool('notify_next_run')  #if the user has selected to show dialogs for library operations
         #check if we should clean the library
         if(utils.getSettingBool('clean_libraries')):
             #check if should update while playing media
             if(xbmc.Player().isPlaying() == False or utils.getSettingBool("run_during_playback")):
-                if(utils.getSettingInt("clean_timer") == 0):
+                if(int(utils.getSetting("clean_timer")) == 0):
                     #check if we should clean music, or video
-                    aJob = CronSchedule()
+		    aJob = CronSchedule()
                     aJob.name = utils.getString(30048)
                     aJob.timer_type = utils.__addon_id__
-                    if((utils.getSettingInt('library_to_clean') == 0 or utils.getSettingInt('library_to_clean') == 1) and database == 'video'):
-                        #create the clean job schedule
+                    if((utils.getSetting('library_to_clean') == '0' or utils.getSetting('library_to_clean') == '1') and database == 'video'):
+			#create the clean job schedule
                         aJob.command = {'method':'VideoLibrary.Clean','params':{'showdialogs':showDialogs}}
-                    if((utils.getSettingInt('library_to_clean') == 2 or utils.getSettingInt('library_to_clean') == 0) and database == 'music'):
-                        aJob.command = {'method':'AudioLibrary.Clean','params':{'showdialogs':showDialogs}}
+                    if((utils.getSetting('library_to_clean') == '2' or utils.getSetting('library_to_clean') == '0') and database == 'music'):
+			aJob.command = {'method':'AudioLibrary.Clean','params':{'showdialogs':showDialogs}}
 
                     self.cleanLibrary(aJob)
 
