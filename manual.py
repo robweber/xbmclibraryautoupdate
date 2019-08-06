@@ -1,4 +1,4 @@
-import xbmcgui
+from kodi_six import xbmcgui
 import resources.lib.utils as utils
 from service import AutoUpdater
 

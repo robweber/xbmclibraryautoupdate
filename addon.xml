@@ -3,6 +3,7 @@
     name="Library Auto Update" version="1.0.4" provider-name="robweber">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.kodi-six" version="0.1.0"/>
   </requires>
   <extension point="xbmc.python.script" library="manual.py"> 
      <provides>executable</provides> 

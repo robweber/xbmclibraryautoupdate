@@ -1,7 +1,4 @@
-import xbmc
-import xbmcgui
-import xbmcaddon
-import xbmcvfs
+from kodi_six import xbmc,xbmcgui,xbmcaddon,xbmcvfs
 
 __addon_id__= 'service.libraryautoupdate'
 __Addon = xbmcaddon.Addon(__addon_id__)
@@ -17,10 +14,10 @@ def addon_dir():
     return __Addon.getAddonInfo('path')
 
 def log(message,loglevel=xbmc.LOGDEBUG):
-    xbmc.log(encode(__addon_id__ + "-" + __Addon.getAddonInfo('version') + " : " + message),level=loglevel)
+    xbmc.log(__addon_id__ + "-" + __Addon.getAddonInfo('version') + " : " + message,level=loglevel)
 
 def showNotification(title,message):
-    xbmcgui.Dialog().notification(encode(getString(30000)),encode(message),time=5000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/media/icon.png"),sound=False)
+    xbmcgui.Dialog().notification(getString(30000),message,time=5000,icon=xbmc.translatePath(__Addon.getAddonInfo('path') + "/resources/media/icon.png"),sound=False)
 
 def setSetting(name,value):
     __Addon.setSettingString(name,value)
@@ -37,5 +34,3 @@ def getSettingInt(name):
 def getString(string_id):
     return __Addon.getLocalizedString(string_id)
 
-def encode(string):
-    return string.encode('UTF-8','replace')

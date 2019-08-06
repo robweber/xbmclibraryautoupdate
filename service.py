@@ -1,9 +1,7 @@
 # -*- coding: cp1252 -*-
 import time
 from datetime import datetime
-import xbmc
-import xbmcgui
-import xbmcvfs
+from kodi_six import xbmc, xbmcgui,xbmcvfs
 import urllib2
 import json
 import resources.lib.utils as utils
