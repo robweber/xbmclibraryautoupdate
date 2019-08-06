@@ -57,7 +57,7 @@ class AutoUpdater:
         #program has started, check if we should show a notification
         self.showNotify()
 
-        while(not xbmc.abortRequested):
+        while(not self.monitor.abortRequested()):
 
             #don't check unless new minute
             if(time.time() > self.last_run + 60):
@@ -75,11 +75,12 @@ class AutoUpdater:
             now = time.time()
         
             count = 0
+            player = xbmc.Player()
             while count < len(self.schedules):
                 cronJob = self.schedules[count]
             
                 if(cronJob.next_run <= now):
-                    if(xbmc.Player().isPlaying() == False or utils.getSettingBool("run_during_playback")):
+                    if(player.isPlaying() == False or utils.getSetting("run_during_playback") == "true"):
 
                         #check if run on idle is checked and screen is idle - disable this on manual run
                         if(not utils.getSettingBool('run_on_idle') or (utils.getSettingBool('run_on_idle') and (self.monitor.screensaver_running or manual))):
