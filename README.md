@@ -1,4 +1,6 @@
 ## Library Updater
+[![Build Status](https://travis-ci.org/robweber/octoprint-java-lib.svg?branch=master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) 
+__Kodi Version Compatibility:__ Kodi 17.x (Krypton) and greater
 
 The Library Updater will update your music and/or video libraries according to times specified by you. Please note that this is just a fancy timer that calls out to the normal Kodi Library Scanning functions. All of the processes associated with scanning are all handed off to Kodi. 
 
