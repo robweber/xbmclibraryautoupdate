@@ -127,8 +127,8 @@ msgid "This update broke custom paths, you must remake them"
 msgstr "This update broke custom paths, you must remake them"
 
 msgctxt "#30031"
-msgid "Video Paths Disclaimer"
-msgstr "Video Paths Disclaimer"
+msgid "Custom Paths Disclaimer"
+msgstr "Custom Paths Disclaimer"
 
 msgctxt "#30032"
 msgid "Path must already be a valid source with content"
