@@ -1,3 +1,7 @@
+Version 1.0.5
+
+fixed issue where custom paths for music could not launch
+
 Version 1.0.4
 
 make sure manual run always works
