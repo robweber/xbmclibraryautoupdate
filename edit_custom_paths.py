@@ -53,7 +53,6 @@ def showMainScreen(contentType):
 
 def get_params():
     param = {}
-
     try:
         for i in sys.argv:
             args = i
@@ -64,7 +63,7 @@ def get_params():
                 param[splitString[0]] = splitString[1]
     except:
         pass
-    utils.log(str(param))
+
     return param
 
 #send type (video/music) to editor
