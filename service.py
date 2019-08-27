@@ -420,7 +420,7 @@ class UpdateMonitor(xbmc.Monitor):
         xbmc.sleep(1000) #slight delay for notifications
         self.update_settings()
 
-    def onDatabaseUpdated(self,database):
+    def onScanFinished(self,database):
         self.after_scan(database)
 
     def onScreensaverActivated(self):
