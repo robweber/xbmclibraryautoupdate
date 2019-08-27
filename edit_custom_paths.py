@@ -1,6 +1,6 @@
 import sys
-import urlparse
 from kodi_six import xbmcgui
+from future.moves.urllib.parse import urlparse
 import resources.lib.utils as utils
 from resources.lib.cronclasses import CustomPathFile
 dialog = xbmcgui.Dialog()

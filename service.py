@@ -2,7 +2,7 @@
 import time
 from datetime import datetime
 from kodi_six import xbmc, xbmcgui,xbmcvfs
-import urllib2
+from future.moves.urllib.request import urlopen
 import json
 import resources.lib.utils as utils
 from resources.lib.croniter import croniter
@@ -346,7 +346,7 @@ class AutoUpdater:
 
     def _networkUp(self):
         try:
-            response = urllib2.urlopen('http://www.google.com',timeout=1)
+            response = urlopen('http://www.google.com',timeout=1)
             return True
         except:
             pass
