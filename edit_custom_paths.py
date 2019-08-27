@@ -25,7 +25,7 @@ def selectPath(contentType):
 def showMainScreen(contentType):
     exitCondition = ""
     customPaths = CustomPathFile(contentType)
-    utils.log(contentType)
+
     while(exitCondition != -1):
         #load the custom paths
         options = ['Add']
