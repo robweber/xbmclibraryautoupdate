@@ -1,6 +1,5 @@
 import sys
 from kodi_six import xbmcgui
-from future.moves.urllib.parse import urlparse
 import resources.lib.utils as utils
 from resources.lib.cronclasses import CustomPathFile
 dialog = xbmcgui.Dialog()
@@ -26,7 +25,7 @@ def selectPath(contentType):
 def showMainScreen(contentType):
     exitCondition = ""
     customPaths = CustomPathFile(contentType)
-    
+    utils.log(contentType)
     while(exitCondition != -1):
         #load the custom paths
         options = ['Add']
@@ -54,14 +53,18 @@ def showMainScreen(contentType):
 
 def get_params():
     param = {}
+
     try:
         for i in sys.argv:
             args = i
-            if(args.startswith('?')):
-                args = args[1:]
-            param.update(dict(urlparse.parse_qsl(args)))
+            if('=' in args):
+                if(args.startswith('?')):
+                    args = args[1:] #legacy in case of url params
+                splitString = args.split('=')
+                param[splitString[0]] = splitString[1]
     except:
         pass
+    utils.log(str(param))
     return param
 
 #send type (video/music) to editor
