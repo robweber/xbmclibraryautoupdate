@@ -9,7 +9,7 @@
   <extension point="xbmc.python.script" library="manual.py"> 
      <provides>executable</provides> 
   </extension> 
-  <extension point="xbmc.service" library="default.py" start="login">
+  <extension point="xbmc.service" library="default.py">
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="be_BY">Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update.</summary>
