@@ -1,3 +1,8 @@
+Version 1.1.0
+
+addon is Python 2/3 compatible
+updated for Leia Python additions
+
 Version 1.0.5
 
 fixed issue where custom paths for music could not launch
