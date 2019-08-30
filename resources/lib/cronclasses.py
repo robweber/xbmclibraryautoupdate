@@ -1,8 +1,6 @@
-import xml.dom.minidom
 import json
+from kodi_six import xbmc, xbmcvfs
 from . import utils as utils
-import xbmcvfs
-import xbmc
 
 class CronSchedule:
     expression = ''
