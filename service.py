@@ -172,11 +172,12 @@ class AutoUpdater:
             aSchedule.next_run = self.calcNextRun(aSchedule.expression,self.last_run)
             self.schedules.append(aSchedule)
 
-            customPaths = CustomPathFile('video')
-            for aJob in customPaths.getSchedules(showDialogs):
-                utils.log("Creating timer " + aJob.name)
-                aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
-                self.schedules.append(aJob)
+        #add custom video paths (separate timers)
+        customPaths = CustomPathFile('video')
+        for aJob in customPaths.getSchedules(showDialogs):
+            utils.log("Creating timer " + aJob.name)
+            aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
+            self.schedules.append(aJob)
 
         if(utils.getSettingBool('update_music')):
             utils.log("Creating timer for Music Library");
@@ -189,13 +190,12 @@ class AutoUpdater:
                 
             self.schedules.append(aSchedule)
 
-
-            #read in any custom path options
-            customPaths = CustomPathFile('music')
-            for aJob in customPaths.getSchedules(showDialogs):
-                utils.log("Creating timer " + aJob.name)
-                aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
-                self.schedules.append(aJob)
+        #add custom music paths (separate timers)
+        customPaths = CustomPathFile('music')
+        for aJob in customPaths.getSchedules(showDialogs):
+            utils.log("Creating timer " + aJob.name)
+            aJob.next_run = self.calcNextRun(aJob.expression, self.last_run)
+            self.schedules.append(aJob)
 
         #release the lock
         self.lock = False

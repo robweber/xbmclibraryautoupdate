@@ -84,6 +84,7 @@
 	<news>Version 1.1.0
 - addon is Python 2/3 compatible
 - updated for Leia Python additions
-- added dep on dateutil module</news>
+- added dep on dateutil module
+- fix custom paths (thanks madsession)</news>
   </extension>
 </addon>
