@@ -85,6 +85,7 @@
 - addon is Python 2/3 compatible
 - updated for Leia Python additions
 - added dep on dateutil module
-- fix custom paths (thanks madsession)</news>
+- fix custom paths (thanks madsession)
+- use waitForAbort() </news>
   </extension>
 </addon>

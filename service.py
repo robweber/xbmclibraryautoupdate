@@ -1,6 +1,6 @@
 # -*- coding: cp1252 -*-
 import time
-from datetime import datetime
+from datetime import datetime,timedelta
 from kodi_six import xbmc, xbmcgui,xbmcvfs
 from future.moves.urllib.request import urlopen
 import json
@@ -12,7 +12,6 @@ UPGRADE_INT = 1  #to keep track of any upgrade notifications
 
 class AutoUpdater:
     last_run = 0
-    sleep_time = 500
     schedules = []
     lock = False
     
@@ -55,15 +54,18 @@ class AutoUpdater:
         #program has started, check if we should show a notification
         self.showNotify()
 
-        while(not self.monitor.abortRequested()):
+        while(True):
 
             #don't check unless new minute
             if(time.time() > self.last_run + 60):
                 self.readLastRun()
 
                 self.evalSchedules()
-
-            xbmc.sleep(self.sleep_time)
+                
+            #calculate the sleep time (next minute)
+            now = datetime.now()
+            if(self.monitor.waitForAbort(60-now.second)):
+                break;
 
         #clean up monitor on exit
         del self.monitor
