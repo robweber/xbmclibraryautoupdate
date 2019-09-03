@@ -2,6 +2,7 @@ Version 1.1.0
 
 addon is Python 2/3 compatible
 updated for Leia Python additions
+added dep for script.module.dateutil
 
 Version 1.0.5
 
