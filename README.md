@@ -1,5 +1,5 @@
 ## Library Updater
-[![Build Status](https://travis-ci.org/robweber/octoprint-java-lib.svg?branch=master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) 
+[![Build Status](https://travis-ci.org/robweber/xbmclibraryautoupdate.svg?branch=master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) 
 
 __Kodi Version Compatibility:__ Kodi 18.x (Leia) and greater
 
