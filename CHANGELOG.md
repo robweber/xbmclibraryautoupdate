@@ -4,13 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased]
+## [Unreleased] 32c63bd
 
 ### Added
 
 - Updated Changelog format to the one suggested by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Version 1.1.0] - 2019-09-03
+## [Version 1.1.0](https://github.com/robweber/xbmclibraryautoupdate/compare/krypton-1.0.4...robweber:leia-1.1.0) - 2019-09-03
 
 ### Added
 - addon is Python 2/3 compatible
@@ -21,12 +21,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - fix custom paths (thanks madsession)
 - use waitForAbort()
 
-## [Version 1.0.5]
+## [Version 1.0.5](https://github.com/robweber/xbmclibraryautoupdate/compare/32c63bd...robweber:a24445c)
 
 ### Changed
 - fixed issue where custom paths for music could not launch
 
-## [Version 1.0.4]
+## [Version 1.0.4](https://github.com/robweber/xbmclibraryautoupdate/compare/v1.0.3...robweber:krypton-1.0.4)
 
 ### Added
  - make next run times more readable (I think)
