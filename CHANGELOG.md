@@ -10,6 +10,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - Updated Changelog format to the one suggested by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [Version 1.1.0] - 2019-09-03
+
+### Added
+- addon is Python 2/3 compatible
+- updated for Leia Python additions
+- added dep for script.module.dateutil
+
+### Changed
+- fix custom paths (thanks madsession)
+- use waitForAbort()
+
 ## [Version 1.0.5]
 
 ### Changed
