@@ -348,7 +348,7 @@ class AutoUpdater:
         try:
             urlopen('http://www.google.com', timeout=1)
             return True
-        except Exception as e:
+        except Exception:
             pass
 
         return False

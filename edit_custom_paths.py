@@ -49,7 +49,7 @@ def showMainScreen(contentType):
                 # delete?
                 if(dialog.yesno(heading=utils.getString(30021), line1=utils.getString(30022))):
                     # get the id of the selected item
-                    aPath = customPaths.getPaths()[exitCondition -1]
+                    aPath = customPaths.getPaths()[exitCondition - 1]
                     # delete that id
                     customPaths.deletePath(aPath['id'])
 
@@ -64,7 +64,7 @@ def get_params():
                     args = args[1:]  # legacy in case of url params
                 splitString = args.split('=')
                 param[splitString[0]] = splitString[1]
-    except:
+    except Exception:
         pass
 
     return param
