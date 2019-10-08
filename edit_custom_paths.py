@@ -5,15 +5,15 @@ from resources.lib.cronclasses import CustomPathFile
 dialog = xbmcgui.Dialog()
 
 #show the disclaimer - do this every time
-dialog.ok(utils.getString(30031),"",utils.getString(30032),utils.getString(30033))
+dialog.ok(utils.getString(30031), "", utils.getString(30032) ,utils.getString(30033))
 
 def selectPath(contentType):
     path = {'expression':'0 */2 * * *','content':contentType}
     
-    #select path to scan
+    # select path to scan
     path['path'] = dialog.browse(0,utils.getString(30023),contentType)
 
-    #create expression
+    # create expression
     if(path['path'] != ''):
         path['expression'] = dialog.input(utils.getString(30056),path['expression'])
     else:
@@ -27,28 +27,28 @@ def showMainScreen(contentType):
     customPaths = CustomPathFile(contentType)
 
     while(exitCondition != -1):
-        #load the custom paths
+        # load the custom paths
         options = ['Add']
         
         for aPath in customPaths.getPaths():
             options.append(aPath['path'] + ' - ' + aPath['expression'])
             
-        #show the gui
+        # show the gui
         exitCondition = dialog.select(utils.getString(30020),options)
         
         if(exitCondition >= 0):
             if(exitCondition == 0):
                 path = selectPath(contentType)
 
-                #could return None if dialog canceled
+                # could return None if dialog canceled
                 if(path != None):
                     customPaths.addPath(path)
             else:
-                #delete?
-                if(dialog.yesno(heading=utils.getString(30021),line1=utils.getString(30022))):
-                    #get the id of the selected item
+                # delete?
+                if(dialog.yesno(heading=utils.getString(30021), line1=utils.getString(30022))):
+                    # get the id of the selected item
                     aPath = customPaths.getPaths()[exitCondition -1]
-                    #delete that id
+                    # delete that id
                     customPaths.deletePath(aPath['id'])
 
 def get_params():
@@ -58,7 +58,7 @@ def get_params():
             args = i
             if('=' in args):
                 if(args.startswith('?')):
-                    args = args[1:] #legacy in case of url params
+                    args = args[1:] # legacy in case of url params
                 splitString = args.split('=')
                 param[splitString[0]] = splitString[1]
     except:
