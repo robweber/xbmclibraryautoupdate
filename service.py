@@ -29,7 +29,7 @@ class AutoUpdater:
 
     def __init__(self):
         utils.check_data_dir()  # in case this directory does not exist yet
-        self.monitor = UpdateMonitor(update_settings = self.createSchedules, after_scan = self.databaseUpdated)
+        self.monitor = UpdateMonitor(update_settings=self.createSchedules, after_scan=self.databaseUpdated)
         self.readLastRun()
 
         # force and update on startup to create the array
@@ -51,7 +51,6 @@ class AutoUpdater:
             xbmcgui.Dialog().ok(utils.getString(30000), utils.getString(30030))
             utils.setSetting('upgrade_notes', str(UPGRADE_INT))
 
-
         # program has started, check if we should show a notification
         self.showNotify()
 
@@ -65,7 +64,7 @@ class AutoUpdater:
 
             # calculate the sleep time (next minute)
             now = datetime.now()
-            if(self.monitor.waitForAbort(60-now.second)):
+            if(self.monitor.waitForAbort(60 - now.second)):
                 break
 
         # clean up monitor on exit
@@ -126,11 +125,11 @@ class AutoUpdater:
             now = time.time()
             self.last_run = now - (now % 60)
 
-    def createSchedules(self, forceUpdate = False):
+    def createSchedules(self, forceUpdate=False):
         utils.log("update timers")
         self.lock = True   # lock so the eval portion does not run
         self.schedules = []
-        showDialogs = utils.getSettingBool('notify_next_run') # if the user has selected to show dialogs for library operations
+        showDialogs = utils.getSettingBool('notify_next_run')  # if the user has selected to show dialogs for library operations
 
         if(utils.getSettingBool('clean_libraries')):
             # create clean schedule (if needed)
@@ -141,7 +140,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30048)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command = {'method':'VideoLibrary.Clean', 'params':{'showdialogs':showDialogs}}
+                    aSchedule.command = {'method': 'VideoLibrary.Clean', 'params': {'showdialogs': showDialogs}}
                     if(utils.getSettingInt("clean_timer") == 4):
                         aSchedule.expression = utils.getSetting("clean_video_cron_expression")
                     else:
@@ -155,7 +154,7 @@ class AutoUpdater:
                     aSchedule = CronSchedule()
                     aSchedule.name = utils.getString(30049)
                     aSchedule.timer_type = utils.__addon_id__
-                    aSchedule.command = {'method':'AudioLibrary.Clean', 'params':{'showdialogs':showDialogs}}
+                    aSchedule.command = {'method': 'AudioLibrary.Clean', 'params': {'showdialogs': showDialogs}}
                     if(utils.getSettingInt("clean_timer") == 4):
                         aSchedule.expression = utils.getSetting("clean_music_cron_expression")
                     else:
@@ -163,7 +162,6 @@ class AutoUpdater:
                     aSchedule.next_run = self.calcNextRun(aSchedule.expression, time.time())
 
                     self.schedules.append(aSchedule)
-
 
         if(utils.getSettingBool('update_video')):
             utils.log("Creating timer for Video Library");
@@ -183,11 +181,11 @@ class AutoUpdater:
             self.schedules.append(aJob)
 
         if(utils.getSettingBool('update_music')):
-            utils.log("Creating timer for Music Library");
+            utils.log("Creating timer for Music Library")
             # create the music schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30013)
-            aSchedule.command = {'method':'AudioLibrary.Scan', 'params':{'showdialogs':showDialogs}}
+            aSchedule.command = {'method': 'AudioLibrary.Scan', 'params': {'showdialogs': showDialogs}}
             aSchedule.expression = self.checkTimer('music')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression, self.last_run)
 
@@ -223,7 +221,7 @@ class AutoUpdater:
     def calcNextRun(self, cronExp, startTime):
         nextRun = -1
 
-        try:        
+        try:
             # create croniter for this expression
             cron = croniter(cronExp, startTime)
             nextRun = cron.get_next(float)
@@ -237,7 +235,7 @@ class AutoUpdater:
 
         return nextRun
 
-    def showNotify(self, displayToScreen = True):
+    def showNotify(self, displayToScreen=True):
         # go through and find the next schedule to run
         next_run_time = CronSchedule()
         for cronJob in self.schedules:
@@ -249,7 +247,7 @@ class AutoUpdater:
         if(next_run_time.next_run > time.time() and utils.getSettingBool('notify_next_run') and displayToScreen):
             utils.showNotification(utils.getString(30000), inWords + " - " + next_run_time.name)
 
-        return inWords    
+        return inWords
 
     def nextRunCountdown(self, nextRun):
         # compare now with next date
@@ -278,7 +276,6 @@ class AutoUpdater:
 
         return result
 
-
     def cleanLibrary(self, cronJob):
         # check if we should verify with user first unless we're on 'clean after update'
         if(utils.getSettingBool('user_confirm_clean') and utils.getSettingInt('clean_timer') != 0):
@@ -305,11 +302,11 @@ class AutoUpdater:
                     # there may be an issue with this file, we'll get it the next time through
                     self.last_run = float(runFile.read())
                 except ValueError:
-                    self.last_run = 0 
+                    self.last_run = 0
 
                 runFile.close()
             else:
-               self.last_run = 0
+                self.last_run = 0
 
     def writeLastRun(self):
         runFile = xbmcvfs.File(xbmc.translatePath(utils.data_dir() + "last_run.txt"), 'w')
@@ -321,7 +318,7 @@ class AutoUpdater:
     def scanRunning(self):
         # check if any type of scan is currently running
         if(xbmc.getCondVisibility('Library.IsScanningVideo') or xbmc.getCondVisibility('Library.IsScanningMusic')):
-            return True            
+            return True
         else:
             return False
 
@@ -338,9 +335,9 @@ class AutoUpdater:
                     aJob.timer_type = utils.__addon_id__
                     if((utils.getSettingInt('library_to_clean') == 0 or utils.getSettingInt('library_to_clean') == 1) and database == 'video'):
                         # create the clean job schedule
-                        aJob.command = {'method':'VideoLibrary.Clean', 'params':{'showdialogs':showDialogs}}
+                        aJob.command = {'method': 'VideoLibrary.Clean', 'params': {'showdialogs': showDialogs}}
                     if((utils.getSettingInt('library_to_clean') == 2 or utils.getSettingInt('library_to_clean') == 0) and database == 'music'):
-                        aJob.command = {'method':'AudioLibrary.Clean', 'params':{'showdialogs':showDialogs}}
+                        aJob.command = {'method': 'AudioLibrary.Clean', 'params': {'showdialogs': showDialogs}}
 
                     self.cleanLibrary(aJob)
 
@@ -349,7 +346,7 @@ class AutoUpdater:
 
     def _networkUp(self):
         try:
-            response = urlopen('http://www.google.com', timeout=1)
+            urlopen('http://www.google.com', timeout=1)
             return True
         except:
             pass
@@ -371,7 +368,7 @@ class AutoUpdater:
                 result = self._sourceExists(aJob.command['params']['directory'])
             else:
                 # check every video path
-                response = json.loads(xbmc.executeJSONRPC(json.dumps({'jsonrpc':'2.0', 'method':'Files.GetSources', 'params':{'media':mediaType}, 'id':44})))
+                response = json.loads(xbmc.executeJSONRPC(json.dumps({'jsonrpc': '2.0', 'method': 'Files.GetSources', 'params': {'media': mediaType}, 'id': 44})))
 
                 # make sure we got something
                 if('result' in response):
@@ -409,6 +406,7 @@ class AutoUpdater:
         else:
             return xbmcvfs.exists(source)
 
+
 class UpdateMonitor(xbmc.Monitor):
     update_settings = None
     after_scan = None
@@ -433,4 +431,3 @@ class UpdateMonitor(xbmc.Monitor):
     def onScreensaverDeactivated(self):
         utils.log("screen saver off", xbmc.LOGDEBUG)
         self.screensaver_running = False
-

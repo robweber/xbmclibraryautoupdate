@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Added
 
 - added badges for license and kodi version
-- added Flake8 styling in Travis CI file
+- added [flake8](https://github.com/pycqa/flake8/) for linting in Travis CI file
 
 ### Added
 

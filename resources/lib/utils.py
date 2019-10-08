@@ -1,7 +1,8 @@
-from kodi_six import xbmc,xbmcgui,xbmcaddon,xbmcvfs
+from kodi_six import xbmc, xbmcgui, xbmcaddon, xbmcvfs
 
 __addon_id__ = 'service.libraryautoupdate'
 __Addon = xbmcaddon.Addon(__addon_id__)
+
 
 def check_data_dir():
     if(not xbmcvfs.exists(xbmc.translatePath(data_dir()))):
@@ -42,4 +43,3 @@ def getSettingInt(name):
 
 def getString(string_id):
     return __Addon.getLocalizedString(string_id)
-
