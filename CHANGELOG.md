@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Added
 
-- added badges for license and kodi version
+- added badges for license, kodi version and pep8
 - added [flake8](https://github.com/pycqa/flake8/) for linting in Travis CI file
 
 ### Changed

@@ -20,7 +20,7 @@ def selectPath(contentType):
     else:
         # return nothing if dialog closed
         return None
-    
+
     return path
 
 
