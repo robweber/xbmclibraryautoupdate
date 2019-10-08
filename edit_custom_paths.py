@@ -9,8 +9,8 @@ dialog.ok(utils.getString(30031), "", utils.getString(30032), utils.getString(30
 
 
 def selectPath(contentType):
-    path = {'expression': '0 */2 * * *','content': contentType}
-    
+    path = {'expression': '0 */2 * * *', 'content': contentType}
+
     # select path to scan
     path['path'] = dialog.browse(0, utils.getString(30023), contentType)
 
@@ -36,7 +36,7 @@ def showMainScreen(contentType):
             options.append(aPath['path'] + ' - ' + aPath['expression'])
 
         # show the gui
-        exitCondition = dialog.select(utils.getString(30020),options)
+        exitCondition = dialog.select(utils.getString(30020), options)
 
         if(exitCondition >= 0):
             if(exitCondition == 0):
@@ -68,6 +68,7 @@ def get_params():
         pass
 
     return param
+
 
 # send type (video/music) to editor
 params = get_params()

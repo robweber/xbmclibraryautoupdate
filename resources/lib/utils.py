@@ -26,7 +26,7 @@ def showNotification(title, message):
 
 
 def setSetting(name, value):
-    __Addon.setSettingString(name,value)
+    __Addon.setSettingString(name, value)
 
 
 def getSetting(name):

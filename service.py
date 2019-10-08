@@ -164,11 +164,11 @@ class AutoUpdater:
                     self.schedules.append(aSchedule)
 
         if(utils.getSettingBool('update_video')):
-            utils.log("Creating timer for Video Library");
+            utils.log("Creating timer for Video Library")
             # create the video schedule
             aSchedule = CronSchedule()
             aSchedule.name = utils.getString(30012)
-            aSchedule.command = {'method':'VideoLibrary.Scan', 'params':{'showdialogs':showDialogs}}
+            aSchedule.command = {'method': 'VideoLibrary.Scan', 'params': {'showdialogs': showDialogs}}
             aSchedule.expression = self.checkTimer('video')
             aSchedule.next_run = self.calcNextRun(aSchedule.expression, self.last_run)
             self.schedules.append(aSchedule)
@@ -348,7 +348,7 @@ class AutoUpdater:
         try:
             urlopen('http://www.google.com', timeout=1)
             return True
-        except:
+        except Exception as e:
             pass
 
         return False
@@ -418,7 +418,7 @@ class UpdateMonitor(xbmc.Monitor):
         self.after_scan = kwargs['after_scan']
 
     def onSettingsChanged(self):
-        xbmc.sleep(1000) # slight delay for notifications
+        xbmc.sleep(1000)  # slight delay for notifications
         self.update_settings()
 
     def onScanFinished(self, database):
