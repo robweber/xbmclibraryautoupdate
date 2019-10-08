@@ -2,7 +2,7 @@
 import time
 from datetime import datetime
 from kodi_six import xbmc, xbmcgui, xbmcvfs
-from future.moves.urllib.request import urlopen
+from future.moves.urllib.request import urlopen, unquote
 import json
 import resources.lib.utils as utils
 from resources.lib.croniter import croniter
@@ -396,7 +396,7 @@ class AutoUpdater:
             splitSource = source.split('/')
             if(len(splitSource) > 0):
                 for aSource in splitSource:
-                    if not xbmcvfs.exists(urllib2.unquote(aSource)):
+                    if not xbmcvfs.exists(unquote(aSource)):
                         # if one source in the multi does not exist, return false
                         return False
                 # if we make it here they all exist

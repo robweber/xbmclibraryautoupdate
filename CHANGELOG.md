@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - added badges for license and kodi version
 - added [flake8](https://github.com/pycqa/flake8/) for linting in Travis CI file
 
+### Changed
+
+- import unquote from future, this would have thrown an error when hit at runtime
+
 ### Added
 
 - Updated Changelog format to the one suggested by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
