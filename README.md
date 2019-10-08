@@ -1,7 +1,5 @@
 ## Library Updater
-[![Build Status](https://travis-ci.org/robweber/xbmclibraryautoupdate.svg?branch=master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) 
-
-__Kodi Version Compatibility:__ Kodi 18.x (Leia) and greater
+![Kodi Version](https://img.shields.io/badge/kodi%20version-v18%20Leia-blue.svg) [![Build Status](https://travis-ci.org/robweber/xbmclibraryautoupdate.svg?branch=master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) [![License](https://img.shields.io/github/license/robweber/xbmclibraryautoupdate)](https://github.com/robweber/xbmclibraryautoupdate/blob/master/LICENSE.txt)
 
 The Library Updater will update your music and/or video libraries according to times specified by you. Please note that this is just a fancy timer that calls out to the normal Kodi Library Scanning functions. All of the processes associated with scanning are all handed off to Kodi. 
 

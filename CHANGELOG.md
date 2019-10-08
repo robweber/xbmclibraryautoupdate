@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Added
 
+- added badges for license and kodi version
+
+### Added
+
 - Updated Changelog format to the one suggested by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Version 1.1.0](https://github.com/robweber/xbmclibraryautoupdate/compare/krypton-1.0.4...robweber:leia-1.1.0) - 2019-09-03
