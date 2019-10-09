@@ -1,5 +1,5 @@
 ## Library Updater
-![Kodi Version](https://img.shields.io/badge/kodi%20version-v18%20Leia-blue.svg) [![Build Status](https://img.shields.io/travis/robweber/xbmclibraryautoupdate/leia)](https://travis-ci.org/robweber/xbmclibraryautoupdate) [![License](https://img.shields.io/github/license/robweber/xbmclibraryautoupdate)](https://github.com/robweber/xbmclibraryautoupdate/blob/master/LICENSE.txt) [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+![Kodi Version](https://img.shields.io/badge/kodi%20version-v18%20Leia-blue.svg) [![Build Status](https://img.shields.io/travis/robweber/xbmclibraryautoupdate/master)](https://travis-ci.org/robweber/xbmclibraryautoupdate) [![License](https://img.shields.io/github/license/robweber/xbmclibraryautoupdate)](https://github.com/robweber/xbmclibraryautoupdate/blob/master/LICENSE.txt) [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 The Library Updater will update your music and/or video libraries according to times specified by you. Please note that this is just a fancy timer that calls out to the normal Kodi Library Scanning functions. All of the processes associated with scanning are all handed off to Kodi. 
 
