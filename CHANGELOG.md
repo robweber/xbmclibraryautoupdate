@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.0...HEAD)
+## [Unrelease](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...HEAD)
+
+## [Version 1.1.1](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.0...robweber:leia-1.1.1) - 2019-10-09
 
 ### Added
 
@@ -13,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
-- import unquote from future, this would have thrown an error when hit at runtime
+- import unquote from future, this would have thrown an error when hit at runtime on Python 3 and "check paths" was turned on
 
 ### Added
 
