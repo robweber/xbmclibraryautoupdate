@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unrelease](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...HEAD)
 
+### Changed
+
+- use the travis CI badge from the shields.io site instead of linking directly to badge on travis site (loads faster)
+
 ## [Version 1.1.1](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.0...robweber:leia-1.1.1) - 2019-10-09
 
 ### Added
