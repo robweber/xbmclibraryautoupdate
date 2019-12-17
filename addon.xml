@@ -7,9 +7,7 @@
     <import addon="script.module.kodi-six" version="0.1.0"/>
     <import addon="script.module.future" version="0.16.0.4"/>
   </requires>
-  <extension point="xbmc.python.script" library="manual.py"> 
-     <provides>executable</provides> 
-  </extension> 
+  <extension point="xbmc.python.script" library="manual.py" /> 
   <extension point="xbmc.service" library="default.py">
   </extension>
   <extension point="xbmc.addon.metadata">
