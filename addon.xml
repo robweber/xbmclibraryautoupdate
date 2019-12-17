@@ -7,11 +7,8 @@
     <import addon="script.module.kodi-six" version="0.1.0"/>
     <import addon="script.module.future" version="0.16.0.4"/>
   </requires>
-  <extension point="xbmc.python.script" library="manual.py"> 
-     <provides>executable</provides> 
-  </extension> 
-  <extension point="xbmc.service" library="default.py">
-  </extension>
+  <extension point="xbmc.python.script" library="manual.py" /> 
+  <extension point="xbmc.service" library="default.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="be_BY">Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update.</summary>
     <summary lang="bg_BG">Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова никога няма да изпуснете нито едно обновяване.</summary>

@@ -1,6 +1,6 @@
 from kodi_six import xbmcgui
 import resources.lib.utils as utils
-from service import AutoUpdater
+from resources.lib.service import AutoUpdater
 
 autoUpdate = AutoUpdater()
 runUpdate = False

@@ -13,6 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 - use the travis CI badge from the shields.io site instead of linking directly to badge on travis site (loads faster)
+- moved service.py class to resources.lib/ folder as Kodi won't cache files in the root folder
+
+### Removed
+
+- removed provides element from addon extension in addon.xml file - this is now identitied by kodi-addon-checker v0.0.15
 
 ## [Version 1.1.1](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.0...robweber:leia-1.1.1) - 2019-10-09
 
