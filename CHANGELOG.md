@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unrelease](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...HEAD)
+## [Version 1.2.0](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...robweber:matrix-1.2.0) - 2020-3-22
 
 ### Added
 
@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - use the travis CI badge from the shields.io site instead of linking directly to badge on travis site (loads faster)
 - moved service.py class to resources.lib/ folder as Kodi won't cache files in the root folder
+- updated supported versions to Matrix or above
 
 ### Removed
 
