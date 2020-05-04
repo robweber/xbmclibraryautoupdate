@@ -1,5 +1,6 @@
 # -*- coding: cp1252 -*-
 import time
+import urllib2
 from datetime import datetime
 from kodi_six import xbmc, xbmcgui, xbmcvfs
 from future.moves.urllib.request import urlopen, unquote
