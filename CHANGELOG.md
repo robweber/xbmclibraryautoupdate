@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [Version 1.2.1](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.1...robweber:matrix-1.2.1) - 2020-3-22
+
+### Added
+
+- added kodi addon submitter to travis build process
+
+### Fixed 
+
+- fixed error in ```xbmcgui.Dialog()``` call. The line2 argument has been deprecated
+- fixed warning related to ```xbmc.translatePath()``` function call. This has been moved to ```xbmcvfs```. 
+
 ## [Version 1.2.0](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...robweber:matrix-1.2.0) - 2020-3-22
 
 ### Added
