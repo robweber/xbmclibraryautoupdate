@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Version 1.2.1](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.1...robweber:matrix-1.2.1) - 2020-3-22
+## [Version 1.2.1](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.0...robweber:matrix-1.2.1) - 2020-3-22
 
 ### Added
 
