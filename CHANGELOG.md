@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unrelease](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...HEAD)
+## [Version 1.1.2](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...robweber:leia-1.1.2) - 2020-12-02
 
 ### Added
 
