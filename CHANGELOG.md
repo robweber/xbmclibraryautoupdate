@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - use the travis CI badge from the shields.io site instead of linking directly to badge on travis site (loads faster)
 - moved service.py class to resources.lib/ folder as Kodi won't cache files in the root folder
+- updated Travis CI from org -> com
 
 ### Removed
 
