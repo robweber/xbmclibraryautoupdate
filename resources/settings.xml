@@ -3,6 +3,7 @@
   <section id="service.libraryautoupdate">
     <category id="general" label="30001" help="">
       <group id="1" label="">
+        <!-- startup delay 0 to 5 min -->
         <setting id="startup_delay" type="integer" label="30008" help="">
           <level>0</level>
           <default>0</default>
@@ -43,6 +44,7 @@
           <default>false</default>
           <control type="toggle" />
         </setting>
+        <!-- upgrade notes not visible to users -->
         <setting id="upgrade_notes" type="integer" label="upgrade_notes" help="">
           <level>4</level>
           <default>1</default>
@@ -68,6 +70,7 @@
           </dependencies>
           <control type="toggle" />
         </setting>
+        <!-- timer options 1 hr, 2 hr, 4 hr, 6 hr, 12 hr, 24 hr -->
     		<setting id="video_timer" type="integer" label="30010" help="">
           <level>0</level>
           <default>2</default>
@@ -113,7 +116,7 @@
         </setting>
       </group>
       <group id="2" label="">
-        <!-- custom paths -->
+        <!-- custom paths editor -->
     		<setting id="run_custom_paths" type="action" label="30020" help="">
           <level>0</level>
           <default />
@@ -138,6 +141,7 @@
           </dependencies>
           <control type="toggle" />
         </setting>
+        <!-- timer options 1 hr, 2 hr, 4 hr, 6 hr, 12 hr, 24 hr -->
         <setting id="music_timer" type="integer" label="30010" help="">
           <level>0</level>
           <default>2</default>
@@ -183,7 +187,7 @@
         </setting>
       </group>
       <group id="2" label="">
-        <!-- custom paths -->
+        <!-- custom paths editor -->
     		<setting id="run_custom_paths_music" type="action" label="30020" help="">
           <level>0</level>
           <default />
@@ -200,6 +204,7 @@
           <default>false</default>
           <control type="toggle" />
         </setting>
+        <!-- options are both, video and music -->
         <setting id="library_to_clean" type="integer" label="30054" help="">
           <level>0</level>
           <default>30055</default>
@@ -215,6 +220,7 @@
           </dependencies>
           <control type="spinner" format="string"/>
         </setting>
+        <!-- can only check this when not on the both setting above -->
         <setting id="user_confirm_clean" type="boolean" label="30051" help="">
           <level>0</level>
           <default>false</default>
@@ -228,6 +234,7 @@
           </dependencies>
           <control type="toggle" />
         </setting>
+        <!-- clean options are after update, daily, weekly, monthly, and custom cron -->
         <setting id="clean_timer" type="integer" label="30043" help="">
           <level>0</level>
           <default>0</default>
