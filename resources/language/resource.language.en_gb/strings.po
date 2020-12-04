@@ -67,16 +67,16 @@ msgid "Run during playback"
 msgstr "Run during playback"
 
 msgctxt "#30008"
-msgid "Startup Delay (minutes)"
-msgstr "Startup Delay (minutes)"
+msgid "Startup Delay"
+msgstr "Startup Delay"
 
 msgctxt "#30009"
 msgid "Used Advanced Timer"
 msgstr "Used Advanced Timer"
 
 msgctxt "#30010"
-msgid "Amount of time between updates (hours)"
-msgstr "Amount of time between updates (hours)"
+msgid "Amount of time between updates"
+msgstr "Amount of time between updates"
 
 msgctxt "#30011"
 msgid "Cron Expression"
@@ -217,3 +217,51 @@ msgstr "Update will run again "
 msgctxt "#30061"
 msgid "Do you wish to manually run an update?"
 msgstr "Do you wish to manually run an update?"
+
+msgctxt "#30062"
+msgid "No Delay"
+msgstr "No Delay"
+
+msgctxt "#30063"
+msgid "1 Minute"
+msgstr "1 Minute"
+
+msgctxt "#30064"
+msgid "2 Minutes"
+msgstr "2 Minutes"
+
+msgctxt "#30065"
+msgid "3 Minutes"
+msgstr "3 Minutes"
+
+msgctxt "#30066"
+msgid "4 Minutes"
+msgstr "4 Minutes"
+
+msgctxt "#30067"
+msgid "5 Minutes"
+msgstr "5 Minutes"
+
+msgctxt "#30068"
+msgid "1 Hour"
+msgstr "1 Hour"
+
+msgctxt "#30069"
+msgid "2 Hours"
+msgstr "2 Hours"
+
+msgctxt "#30070"
+msgid "4 Hours"
+msgstr "4 Hours"
+
+msgctxt "#30071"
+msgid "6 Hours"
+msgstr "6 Hours"
+
+msgctxt "#30072"
+msgid "12 Hours"
+msgstr "12 Hours"
+
+msgctxt "#30073"
+msgid "24 Hours"
+msgstr "24 Hours"
