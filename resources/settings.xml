@@ -4,7 +4,7 @@
     <category id="general" label="30001" help="">
       <group id="1" label="">
         <!-- startup delay 0 to 5 min -->
-        <setting id="startup_delay" type="integer" label="30008" help="">
+        <setting id="startup_delay" type="integer" label="30008" help="30074">
           <level>1</level>
           <default>0</default>
           <constraints>
@@ -24,12 +24,12 @@
           <default>true</default>
           <control type="toggle" />
         </setting>
-    		<setting id="run_during_playback" type="boolean" label="30007" help="">
+    		<setting id="run_during_playback" type="boolean" label="30007" help="30075">
           <level>1</level>
           <default>false</default>
           <control type="toggle" />
         </setting>
-    		<setting id="run_on_idle" type="boolean" label="30014" help="">
+    		<setting id="run_on_idle" type="boolean" label="30014" help="30076">
           <level>1</level>
           <default>false</default>
           <control type="toggle" />
@@ -39,7 +39,7 @@
           <default>false</default>
           <control type="toggle" />
         </setting>
-        <setting id="disable_manual_prompt" type="boolean" label="30015" help="">
+        <setting id="disable_manual_prompt" type="boolean" label="30015" help="30077">
           <level>2</level>
           <default>false</default>
           <control type="toggle" />
@@ -62,7 +62,7 @@
           <default>true</default>
           <control type="toggle" />
         </setting>
-    		<setting id="video_advanced_timer" type="boolean" label="30009" help="">
+    		<setting id="video_advanced_timer" type="boolean" label="30009" help="30078">
           <level>2</level>
           <default>false</default>
           <dependencies>
@@ -71,7 +71,7 @@
           <control type="toggle" />
         </setting>
         <!-- timer options 1 hr, 2 hr, 4 hr, 6 hr, 12 hr, 24 hr -->
-    		<setting id="video_timer" type="integer" label="30010" help="">
+    		<setting id="video_timer" type="integer" label="30010" help="30079">
           <level>0</level>
           <default>2</default>
           <constraints>
@@ -95,7 +95,7 @@
           </dependencies>
           <control type="spinner" format="string"/>
         </setting>
-    		<setting id="video_cron_expression" type="string" label="30011" help="">
+    		<setting id="video_cron_expression" type="string" label="30011" help="30080">
           <level>2</level>
           <default>0 * * * *</default>
           <constraints>
@@ -117,7 +117,7 @@
       </group>
       <group id="2" label="">
         <!-- custom paths editor -->
-    		<setting id="run_custom_paths" type="action" label="30020" help="">
+    		<setting id="run_custom_paths" type="action" label="30020" help="30081">
           <level>3</level>
           <default />
           <control type="button" format="action">
@@ -133,7 +133,7 @@
           <default>false</default>
           <control type="toggle" />
         </setting>
-        <setting id="music_advanced_timer" type="boolean" label="30009" help="">
+        <setting id="music_advanced_timer" type="boolean" label="30009" help="30078">
           <level>2</level>
           <default>false</default>
           <dependencies>
@@ -142,7 +142,7 @@
           <control type="toggle" />
         </setting>
         <!-- timer options 1 hr, 2 hr, 4 hr, 6 hr, 12 hr, 24 hr -->
-        <setting id="music_timer" type="integer" label="30010" help="">
+        <setting id="music_timer" type="integer" label="30010" help="30079">
           <level>0</level>
           <default>2</default>
           <constraints>
@@ -166,7 +166,7 @@
           </dependencies>
           <control type="spinner" format="string"/>
         </setting>
-        <setting id="music_cron_expression" type="string" label="30011" help="">
+        <setting id="music_cron_expression" type="string" label="30011" help="30080">
           <level>2</level>
           <default>0 * * * *</default>
           <constraints>
@@ -188,7 +188,7 @@
       </group>
       <group id="2" label="">
         <!-- custom paths editor -->
-    		<setting id="run_custom_paths_music" type="action" label="30020" help="">
+    		<setting id="run_custom_paths_music" type="action" label="30020" help="30081">
           <level>3</level>
           <default />
           <control type="button" format="action">
@@ -199,7 +199,7 @@
   	</category>
     <category id="clean_timer" label="30040">
       <group id="1" label="">
-        <setting id="clean_libraries" type="boolean" label="30041" help="">
+        <setting id="clean_libraries" type="boolean" label="30041" help="30082">
           <level>1</level>
           <default>false</default>
           <control type="toggle" />
@@ -221,7 +221,7 @@
           <control type="spinner" format="string"/>
         </setting>
         <!-- can only check this when not on the both setting above -->
-        <setting id="user_confirm_clean" type="boolean" label="30051" help="">
+        <setting id="user_confirm_clean" type="boolean" label="30051" help="30083">
           <level>2</level>
           <default>false</default>
           <dependencies>
@@ -235,7 +235,7 @@
           <control type="toggle" />
         </setting>
         <!-- clean options are after update, daily, weekly, monthly, and custom cron -->
-        <setting id="clean_timer" type="integer" label="30043" help="">
+        <setting id="clean_timer" type="integer" label="30043" help="30084">
           <level>1</level>
           <default>0</default>
           <constraints>
@@ -252,7 +252,7 @@
           </dependencies>
           <control type="spinner" format="string"/>
         </setting>
-        <setting id="clean_video_cron_expression" type="string" label="30056" help="">
+        <setting id="clean_video_cron_expression" type="string" label="30056" help="30080">
           <level>1</level>
           <default>0 0 * * *</default>
           <constraints>
@@ -271,7 +271,7 @@
             <heading>30056</heading>
           </control>
         </setting>
-        <setting id="clean_music_cron_expression" type="string" label="30057" help="">
+        <setting id="clean_music_cron_expression" type="string" label="30057" help="30080">
           <level>1</level>
           <default>0 2 * * *</default>
           <constraints>
