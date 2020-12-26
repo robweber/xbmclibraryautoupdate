@@ -4,16 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [Unreleased](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.1...matrix)
+
+### Added
+
+- added support for levels (Basic, Standard, Advanced, Expert) when viewing settings
+
+### Changed
+
+- updated ```settings.xml``` format to the Kodi standard.
+
+
+### Fixed
+
+- ```xbmc.translatePath``` moved to ```xbmcvfs.translatePath```
+
 ## [Version 1.2.1](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.0...robweber:matrix-1.2.1) - 2020-6-22
 
 ### Added
 
 - added kodi addon submitter to travis build process
 
-### Fixed 
+### Fixed
 
 - fixed error in ```xbmcgui.Dialog()``` call. The line2 argument has been deprecated
-- fixed warning related to ```xbmc.translatePath()``` function call. This has been moved to ```xbmcvfs```. 
+- fixed warning related to ```xbmc.translatePath()``` function call. This has been moved to ```xbmcvfs```.
 
 ## [Version 1.2.0](https://github.com/robweber/xbmclibraryautoupdate/compare/leia-1.1.1...robweber:matrix-1.2.0) - 2020-3-22
 
@@ -229,7 +244,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Version 0.6.5
 
-- added setting to prompt user before doing scheduled clean. Defaults to False. 
+- added setting to prompt user before doing scheduled clean. Defaults to False.
 
 - added ability to schedule cleaning separate
 
@@ -265,7 +280,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Version 0.5.8
 
-- added a 1 minute delay timer before running a scan if XBMC has just exited playback. This should help in scenerios where ending media viewing results in an immediate scan that the user didn't want. 
+- added a 1 minute delay timer before running a scan if XBMC has just exited playback. This should help in scenerios where ending media viewing results in an immediate scan that the user didn't want.
 
 ## Version 0.5.7
 
@@ -282,7 +297,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 -added methods to display a "countdown" when the next update will occur, and settings to display notifications
 
 ## Version 0.5.4
- 
+
 - fixed issue with startup timer, thanks stevenD
 
 ## Version 0.5.2
@@ -291,7 +306,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Version 0.5.1
 
-- merged changes from pkscuot's branch. 
+- merged changes from pkscuot's branch.
 - rounds last_run to top of the minute (timer executes at 00 not anywhere in minute)
 - creates addon data directory if it doesn't exist
 
@@ -303,16 +318,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## Version 0.4.1
 
-- added extra setting for a "startup delay" timer. This will only affect the addon when xbmc starts. 
+- added extra setting for a "startup delay" timer. This will only affect the addon when xbmc starts.
 - the last running time is now set to a variable so that manual updates will reset the timer, and system resets will start the service where it left off
 
 ## Version 0.4.0
 
-- Had a user suggestion to allow for a manual launch of the process as well as the service. Since the service point will ALWAYS launch on startup the manual option will kick off the library update process. 
+- Had a user suggestion to allow for a manual launch of the process as well as the service. Since the service point will ALWAYS launch on startup the manual option will kick off the library update process.
 
 ## Version 0.3.9
- 
-- running video and music scans side by side never really worked. Now checks if scan is running and waits until complete before running the next scan. 
+
+- running video and music scans side by side never really worked. Now checks if scan is running and waits until complete before running the next scan.
 
 ## Version 0.3.5
 
@@ -323,4 +338,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - fixed a really stupid indent error
 - added cancelalarm call in case run more than once
-
