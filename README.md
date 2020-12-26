@@ -15,14 +15,14 @@ Be aware that settings are visible based on the [Kodi Settings Level](https://ko
 * Show Notifications - shows notifications when the updater will run again
 * Run During Playback - should the addon run a scheduled scan when you are playing media (yes/no)
 * Only run when idle - restricts the scanning process to when the screensaver is active
-* Check if sources exist before scan - checks if the sources are online before starting the scan process. For single source scans it will check only that source. ![Settings Level Advanced](https://img.shields.io/badge/setting%20level-advanced-blue)
-* Disable Manual Run Prompt - disables the dialog box when selecting Manual Run and just goes right to the library update ![Settings Level Advanced](https://img.shields.io/badge/setting%20level-advanced-blue)
+* Check if sources exist before scan - checks if the sources are online before starting the scan process. For single source scans it will check only that source. ![Settings Level Advanced](https://img.shields.io/badge/-advanced-blue)
+* Disable Manual Run Prompt - disables the dialog box when selecting Manual Run and just goes right to the library update ![Settings Level Advanced](https://img.shields.io/badge/-advanced-blue)
 
 ### Video Settings:
 
 Enabling this will turn on scanning for the Video Library. This is the same as calling "Update Library" from within the Video menus of Kodi. There are a few options you can tweak regarding how often you want the scanner to run. Read the section on Timer Options for more information.
 
-__Custom Paths__ ![Settings Level Expert](https://img.shields.io/badge/setting%20level-expert-blue)
+__Custom Paths__ ![Settings Level Expert](https://img.shields.io/badge/-expert-blue)
 
 Custom paths are a special advanced feature for the Video library. It allows you to specify different schedules for individual paths in your library. This editor is limited to the Cron style syntax for scheduling. The path you select must already be in the video database and have content selected. The path must also match your source path exactly.
 
@@ -38,7 +38,7 @@ __Standard Timer__
 
 Specify an interval to run the library update process. It will be launched every X hours within the interval unless on of the conditions specified by you as been met (don't run during media playback, etc) in which case it will be run at the next earliest convenience.
 
-__Advanced Timer__ ![Settings Level Advanced](https://img.shields.io/badge/setting%20level-advanced-blue)
+__Advanced Timer__ ![Settings Level Advanced](https://img.shields.io/badge/-advanced-blue)
 
 Specify a cron expression to use as an interval for the update process. By default the expression will run at the top of every hour. More advanced expressions can be configured such as:
 
@@ -65,7 +65,7 @@ Read up on cron (http://en.wikipedia.org/wiki/Cron) for more information on how 
 Cleaning the Music/Video Libraries is not enabled by default. If you choose to do this you can select from a few options to try and reduce the likelyhood that a DB clean wile hose your database.
 
 * Library to Clean - You can clean your video library, music library, or both.
-* Prompt User Before Cleaning - you must confirm that you want to clean the library before it will happen. Really only useful for "After Update" as a condition. ![Settings Level Advanced](https://img.shields.io/badge/setting%20level-advanced-blue)
+* Prompt User Before Cleaning - you must confirm that you want to clean the library before it will happen. Really only useful for "After Update" as a condition. ![Settings Level Advanced](https://img.shields.io/badge/-advanced-blue)
 * Frequency - There are several frequency options.
   * "After Update" will run a clean immediately following a scan on the selected library.
   * The Day/Week/Month options will schedule a clean task to happen. Cleaning the Video Library is hardcoded for midnight and the music library at 2am. Weekly updates occur on Sunday and Monthly updates occur on the first of each month - these values are hardcoded.
