@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 
 - ```xbmc.translatePath``` moved to ```xbmcvfs.translatePath```
+- issue with ```xbmcgui.Dialog()``` class, only takes 2 args now
 
 ## [Version 1.2.1](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.0...robweber:matrix-1.2.1) - 2020-6-22
 
