@@ -1,6 +1,6 @@
 ## Library Updater
 
-### __This is not the default branch - go to the [Leia branch](https://github.com/robweber/xbmclibraryautoupdate/tree/leia) for the current supported version__
+### __This is not the default branch - go [HERE](https://github.com/robweber/xbmclibraryautoupdate/) for the current supported version__
 
 The Library Updater will update your music and/or video libraries according to times specified by you. Please note that this is just a fancy timer that calls out to the normal Kodi Library Scanning functions. All of the processes associated with scanning are all handed off to Kodi. 
 
