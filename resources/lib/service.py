@@ -18,15 +18,6 @@ class AutoUpdater:
 
     monitor = None
 
-    # setup the timer amounts
-    timer_amounts = {}
-    timer_amounts['0'] = 1
-    timer_amounts['1'] = 2
-    timer_amounts['2'] = 4
-    timer_amounts['3'] = 6
-    timer_amounts['4'] = 12
-    timer_amounts['5'] = 24
-
     def __init__(self):
         utils.check_data_dir()  # in case this directory does not exist yet
         self.monitor = UpdateMonitor(update_settings=self.createSchedules, after_scan=self.databaseUpdated)
@@ -208,13 +199,13 @@ class AutoUpdater:
 
     def checkTimer(self, settingName):
         result = ''
-
+        utils.log(utils.getSetting(settingName + "_timer"))
         # figure out if using standard or advanced timer
         if(utils.getSettingBool(settingName + '_advanced_timer')):
             # copy the expression
             result = utils.getSetting(settingName + "_cron_expression")
         else:
-            result = '0 */' + str(self.timer_amounts[utils.getSetting(settingName + "_timer")]) + ' * * *'
+            result = '0 */' + str(utils.getSetting(settingName + "_timer")) + ' * * *'
 
         return result
 
