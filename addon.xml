@@ -79,6 +79,6 @@
 		<icon>resources/media/icon.png</icon>
 	</assets>
 	<news>Version 1.2.4
-Fix lang file "mgstr" value</news>
+Updated lang files using Webplate integration</news>
   </extension>
 </addon>

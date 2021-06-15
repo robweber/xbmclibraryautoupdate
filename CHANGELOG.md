@@ -6,9 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.3...robweber:matrix)
 
-### Fixed
+### Changed
 
-- default en_gb file must use empty `msgstr` value
+- multiple language files updated through integration with [Webplate](https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-xbmclibraryautoupdate/), thanks to @gade01 for helping to get it working.
 
 ## [Version 1.2.3](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.2...robweber:matrix-1.2.3)
 
