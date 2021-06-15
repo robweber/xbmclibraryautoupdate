@@ -22,11 +22,11 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Kodi 비디오, 음악 라이브러리를 타이머로 자동 업데이트 하세요. 타이머는 Kodi 서비스로 실행되므로 업데이트를 잊어버리는 일은 없습니다."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "음악과 비디오 라이브러리 업데이트를 예약 실행하는 Kodi 서비스입니다. 미디어 데이터베이스(오디오, 비디오, 모두)를 각각 다른 간격으로 업데이트하도록 선택하거나 cron 스타일의 타이머를 설정할 수 있습니다. 타이머가 시작될 때 오디오나 비디오를 재생하고 있다면 재생을 완료할 때까지 라이브러리 업데이트 프로세스를 생략할 수 있습니다. 지정한 비디오 경로 업데이트, 음악/비디오 라이브러리 정리도 지원합니다."
 
 msgctxt "#30000"

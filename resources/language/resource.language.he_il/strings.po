@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
-msgstr "עדכן את ספריות הוידאו והמוזיקה של Kodi בעזרת טיימר. הטיימר ירוץ כשירות Kodi כך שלא תפספס עדכון."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgstr "עדכן את ספריות הוידאו והמוזיקה של קודי בעזרת שעון עצר שירוץ ברקע כשירות קודי כך שלא תפספס עדכון."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "זהו שירות Kodi היעדכן את ספריות הוידאו ומוזיקה שלך לפי טיימר. ביכולתך לבחור תדירות שונה לסריקת מסדי הנתונים (אודיו, וידאו, שניהם) או להגדיר טיימר דמוי Cron לשליטה טובה יותר. כאשר מנוגן קובץ אודיו או וידאו הטיימר מסוגל לדלג על תהליך העדכון עד לאחר תום הניגון כך שחווית המדיה שלך לא תיפגם. נוספה תמיכה לעדכון נתיב וידאו ספציפי וניקוי ספריות המוזיקה/וידאו."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "זהו שירות קושי שמעדכן את ספריות הוידאו ומוזיקה שלך בעזרת שעון עצר. ביכולתך לבחור לוחות זמנים שונים לסריקת מסדי הנתונים (אודיו, וידאו, שניהם) או להגדיר שעון עצר דמוי Cron לשליטה טובה יותר. כאשר מנוגן קובץ אודיו או וידאו, שעון עצר מסוגל לדלג על תהליך העדכון, עד לאחר תום הניגון, כך שחווית המדיה שלך לא תיפגם. נוספה תמיכה לעדכון נתיב וידאו ספציפי וניקוי ספריות המוזיקה/וידאו."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"
