@@ -21,12 +21,12 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Aktualizujte Vašu Kodi Video a Hudobnú knižnicu podľa časovača. Časovač beží ako Kodi služba, takže nikdy nezmeškáte aktualizáciu."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Toto je Kodi služba, ktorá aktualizuje Vašu Kodi Hudobnú a Video knižnicu podľa časovača. Môžete zvoliť rôzne intervaly aktualizácie databáz (Hudba,Video,oboje) alebo pre väčšiu kontrolu zadáte časovač podobný Cron-u. Pokiaľ práve prehrávate hudobný alebo video súbor počas štartu časovača, môže byť aktualizácia odložená, aby nebol Váš mediálny zážitok narušený. Aktualizácia špecifických ciest a upratovanie Hudobnej/Video databázy je tiež podporované. "
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Toto je Kodi služba, ktorá aktualizuje Vašu Kodi Hudobnú a Video knižnicu podľa časovača. Môžete zvoliť rôzne intervaly aktualizácie databáz (Hudba,Video,oboje) alebo pre väčšiu kontrolu zadáte časovač podobný Cron-u. Pokiaľ práve prehrávate hudobný alebo video súbor počas štartu časovača, môže byť aktualizácia odložená, aby nebol Váš mediálny zážitok narušený. Aktualizácia špecifických ciest a upratovanie Hudobnej/Video databázy je tiež podporované."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

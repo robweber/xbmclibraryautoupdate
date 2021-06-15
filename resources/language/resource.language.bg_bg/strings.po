@@ -22,11 +22,11 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
-msgstr "Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова никога няма да изпуснете нито едно обновяване."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgstr "Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова няма да изпуснете нито едно обновяване."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Услугата ще обновява видео и музикалната библиотека в Kodi през определен интервал от време. Можете да променяте интервала за сканиране (на източниците на видео, аудио или и за двата вида информация). Можете да зададете брояч в стил Cron (за запознатите с Linux), който Ви осигурява по-голям контрол. Ако се случи, че гледате/слушате файл от библиотека за която се е задействал брояч сканирането ще се отложи до момента в който не приключите активността. Също така се поддържа и обновяване на определени папки и почистване на библиотеките."
 
 msgctxt "#30000"

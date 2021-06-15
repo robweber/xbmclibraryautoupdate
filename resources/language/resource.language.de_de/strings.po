@@ -27,12 +27,12 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Update deine Kodi Video- und Musiklibrariers mit einem Timer. Der Timer läuft als ein Kodi service, sodass Du niemals ein Update verpasst."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Dies ist ein Kodi Service, der deine Musik und Video Bibliothek in bestimmten Abständen automatisch aktualisiert. Du kannst verschiedene Intervalle für das Scannen deiner Mediendatenbanken (Audio, Video oder beides) verwenden oder einen eigenen Cron Ausdruck für noch mehr Kontrolle benutzen. Wenn du gerade Musik oder ein Video abspielst kannst du den Timer des automatischen Updates überspringen, so dass dein Film Erlebnis nicht unterbrochen wird. Die Aktualisierung von konkreten Pfaden und Aufräumen der Musik/Video Bibliotheken wird nun unterstützt"
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Dies ist ein Kodi Service, der deine Musik und Video Bibliothek in bestimmten Abständen automatisch aktualisiert. Du kannst verschiedene Intervalle für das Scannen deiner Mediendatenbanken (Audio, Video oder beides) verwenden oder einen eigenen Cron Ausdruck für noch mehr Kontrolle benutzen. Wenn du gerade Musik oder ein Video abspielst kannst du den Timer des automatischen Updates überspringen, so dass dein Film Erlebnis nicht unterbrochen wird. Die Aktualisierung von spezifischen Pfaden und das Aufräumen der Musik/Video Bibliotheken wird nun unterstützt"
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

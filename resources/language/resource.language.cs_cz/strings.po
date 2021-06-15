@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Aktualizujte svou knihovnu videa a hudby v Kodi podle časovače. Časovač běží jako služba Kodi, takže nikdy nezmeškáte aktualizaci."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Toto je služba Kodi, která aktualizuje vaše knihovny hudby a videa podle časovače. Můžete vybrat různý interval pro prohledávání vašich databází médií (audio, video, obojí) nebo můžete nastavit časovač ve stylu cronu pro lepší ovládání. Pokud přehráváte soubor audia nebo videa, když se spustí časovač, může být proces aktualizace knihovny přeskočen, dokud není přehrávání dokončeno, aby nebylo přerušeno. Nyní jsou také podporovány Aktualizace konkrétní cesty k videu a Čištění knihoven hudby a videa."
 
 msgctxt "#30000"

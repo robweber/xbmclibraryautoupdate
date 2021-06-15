@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Actualize as suas bibliotecas de vídeo e música do Kodi com um temporizador. Ele actua como um serviço do Kodi para que nunca perca uma actualização."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Este é um serviço do Kodi que actualizará as suas bibliotecas de música e vídeo por temporizador. Pode seleccionar intervalos de tempo para analisar as suas bases de média (áudio, vídeo, ambas) ou pode definir um temporizador cron para maior controlo. Se estiver a reproduzir um ficheiro áudio ou vídeo quando o temporizador inicia, este pode adiar a actualização da biblioteca até a reprodução estar concluída, para não interromper. Agora pode também actualizar uma localização de vídeo específica e limpar as bibliotecas áudio/vídeo."
 
 msgctxt "#30000"

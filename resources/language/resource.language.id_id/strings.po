@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
 msgstr "Perbarui Pustaka Video dan Musik Kodi Anda dalam interval waktu. Timer dijalankan sebagai layanan Kodi sehingga Anda tak akan kelewatan hal baru."
 
 msgctxt "Addon Description"
-msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Ini adalah Layanan Kodi yang akan memperbarui pustaka musik dan video Anda dalam interval waktu. Anda dapat memilih interval yang berbeda untuk memindai basis data media (Audio, Video, Keduanya) atau Anda dapat mengeset timer ala cron untuk kontrol yang lebih luas. Apabila Anda memutar berkas audio atau video saat timer dimulai, ia dapat melewati proses pembaruan pustaka sampai pemutaran selesai sehingga pengalaman media Anda tidak terganggu. Memperbarui Lokasi Video spesifik, serta Membersihkan pustaka Musik/Video kini dapat dilakukan."
 
 msgctxt "#30000"
