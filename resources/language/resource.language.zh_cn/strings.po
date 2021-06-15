@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
-msgstr "定时更新你的 Kodi 视频和音乐资料库。定时器以 Kodi 服务的方式运行以保证不会错过更新。"
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgstr "定时更新你的Kodi视频和音乐资料库。定时器以Kodi服务的方式运行以保证不会错过更新。"
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "这是一个定时更新你的音乐和视频资料库的 Kodi 服务程序。你可以设置不同的时间间隔来扫描媒体库（音频、视频或二者），或者设置一个 cron 类型的定时器来获得更好的控制。如果定时动作开始时你正在播放一个音频或视频文件，它会跳过此次更新直到播放完毕以避免影响你欣赏媒体。现在已支持更新指定的视频路径以及清理音视频资料库。"
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "这是一个定时更新你的音乐和视频资料库的Kodi服务程序。你可以设置不同的时间间隔来扫描媒体库（音频、视频或二者），或者设置一个cron类型的定时器来获得更好的控制。如果定时动作开始时你正在播放一个音频或视频文件，它会跳过此次更新直到播放完毕以避免影响你欣赏媒体。现在已支持更新指定的视频路径以及清理音视频资料库。"
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

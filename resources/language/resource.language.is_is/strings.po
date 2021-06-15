@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
 msgstr "Uppfæra Kvikmynda og Tónlistarsöfnin þín á Kodi á ákveðnum tímum. Tímasetningin keyrir sem þjónusta á Kodi svo þú missir aldrei af uppfærslu."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Þetta er Kodi þjónusta sem uppfærir tónlistar- og kvikmyndasöfnin þín á ákveðnum tímum. Þú getur valið mismunandi tímabil til að skanna miðlunar gagnasöfn þín. (Tónlist, Kvikmyndir, Bæði) eða þú getur still cron tímasetningu til að hafa frekari stjórnun. Ef þú ert að keyra hljóð eða mynd þegar tíminn kemur þá bíður hann með uppfærslu þangað til að þú ert búinn til að trufla ekki afspilunina. Stuðningur er nú við uppfærslur á tilgreindum slóðum og Tiltekt á tónlistar/myndefnis söfnum."
 
 msgctxt "#30000"

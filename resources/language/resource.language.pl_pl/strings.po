@@ -25,12 +25,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
-msgstr "Automatycznie aktualizuj swoją bibliotekę wideo i muzyki. Harmonogram aktualizacji działa jako usługa Kodi, więc nigdy nie przegapisz niezbędnych aktualizacji."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgstr "Automatycznie aktualizuj swoją bibliotekę filmów i albumów muzycznych. Usługa jest częścią Kodi, więc nigdy nie przegapisz niezbędnych aktualizacji."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Dodatek ten jest usługą Kodi, która aktualizuje bibliotekę muzyki i wideo. Pozwala określić częstotliwość skanowana bibliotek (Muzyki, Wideo lub obu) lub ustawić formułę w stylu Crona, w celu lepszej kontroli. Jeżeli odtwarzasz muzykę lub wideo, to aktualizacja biblioteki rozpocznie się dopiero po zakończeniu odtwarzania. Obsługiwana jest także aktualizacja wybranych ścieżek wideo oraz czyszczenie bibliotek muzyki i wideo."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Jest to usługa Kodi, która aktualizuje twoją kolekcję muzyki oraz wideo. Pozwala określić odstęp czasu w jakim twoja biblioteka będzie skanowana lub dla lepszej kontroli ustawić formułę cron. Jeżeli odtwarzasz muzykę lub film, to aktualizacja kolekcji rozpocznie się po zakończeniu odtwarzania. Obsługiwana jest aktualizacja podanej ścieżki wideo oraz czyszczenie bibliotek muzyki i wideo."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

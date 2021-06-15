@@ -24,12 +24,12 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
-msgstr "Il est possible de mettre à jour la vidéothèque et l'audiothèque Kodi avec une minuterie. La minuterie fonctionne comme un service Kodi afin de ne jamais manquer une mise à jour."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
+msgstr "Mettez à jour votre vidéo médiathèques Kodi et votre bibliothèques musicales avec une minuterie. La minuterie fonctionne comme un service Kodi afin que vous ne manquez jamais une mise à jour."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Il s'agit d'un service de Kodi qui mettra à jour l'audiothèque et la vidéothèque sur une minuterie. On peut sélectionner un intervalle différent pour analyser les bases de données multimédia (audio, vidéo, les deux) ou on peut régler une minuterie pour un meilleur contrôle. Si un fichier audio ou vidéo est en lecture lorsque la minuterie démarre, la mise à jour de médiathèque peut être ignorée jusqu'à la fin de lecture pour ne pas interrompre l'utilisation multimédia. La mise à jour d’un chemin spécifique de vidéo et le nettoyage de l'audiothèque ou de la vidéothèque est maintenant possible."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Il s'agit d'un service de Kodi qui mettra à jour vos bibliothèques musicale et vidéo sur une minuterie. Vous pouvez sélectionner plusieurs intervalles pour scanner vos bases de données multimédia (Audio,Vidéo,Les deux) ou vous pouvez régler une minuterie pour un meilleur contrôle. Si vous jouez un fichier audio ou vidéo lorsque la minuterie démarre, le processus de mise à jour bibliothèque peut être ignoré jusqu'à ce que la lecture soit terminée afin que votre expérience multimédia ne soit pas interrompue. Mise à jour d’un chemin vidéo spécifique, et nettoyage des bibliothèques de musique/vidéo est maintenant supporté."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

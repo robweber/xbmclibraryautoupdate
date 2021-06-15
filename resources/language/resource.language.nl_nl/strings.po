@@ -23,12 +23,12 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
 msgstr "Werk je Kodi video en muziek bibliotheken periodiek bij. De timer werkt als een Kodi service zodat je geen enkele update mist."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Dit is een Kodi service die je muziek en video bibliotheek periodiek bijwerkt. Je kan een interval instellen per media bibliotheek (audio, video of beide) of je kan een timer in cron-stijl instellen voor meer controle. Als je een audio of video file afspeelt wanneer een geplande update start, kan het bijwerken worden uitgesteld tot het bestand is afgespeeld om je media-beleving niet te onderbreken. Een specifieke video locatie bijwerken en de muziek/videobibliotheken opschonen, zijn nu ondersteund."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Dit is een Kodi service die je muziek en video bibliotheek periodiek bijwerkt. Je kan een interval instellen per media bibliotheek (audio, video of beide) of je kan een timer in cron-stijl instellen voor meer controle. Als je een audio of video file afspeelt wanneer een geplande update start, kan het bijwerken worden uitgesteld tot het bestand is afgespeeld om je media-beleving niet te onderbreken. Een specifieke video locatie bijwerken en de muziek/videobibliotheken opschonen, zijn nu ondersteund. "
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"
