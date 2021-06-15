@@ -22,12 +22,12 @@ msgstr ""
 "X-Generator: Weblate 4.6.2\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
 msgstr "Обновляет вашу медиатеку по таймеру. Таймер работает как сервис Kodi, поэтому вы никогда не забудете об обновлении."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Это сервис, который обновляет вашу медиатеку по таймеру. Вы можете выбрать разные периоды для сканирования ваших баз (Аудио, Видео, и то и то) или установить таймер по-времени для большего контроля. Если запущено проигрывание аудио или видео файла, когда срабатывает таймер, он может отменить процесс обновления до тех пор, пока Вы не закончите прослушивание или просмотр чего-либо. Выборочное обновление папок с Видео, очистка медиатеки теперь также поддерживается."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Это сервис, который обновляет вашу медиатеку по таймеру. Вы можете выбрать разные периоды для сканирования  ваших баз (Аудио, Видео, и то и то) или установить таймер по-времени для большего контроля. Если запущено проигрывание аудио или видео файла, когда срабатывает таймер, он может отменить процесс обновления до тех пор, пока Вы не закончите прослушивание или просмотр чего-либо. &#10;Выборочное обновление папок с Видео, очистка медиатеки теперь также поддерживается."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"

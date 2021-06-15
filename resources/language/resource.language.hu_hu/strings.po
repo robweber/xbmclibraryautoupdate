@@ -22,11 +22,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
 msgstr "Az Kodi videó és zene könyvtárak időzített frissítése. Az időzítő az Kodi szolgáltatásaként fut, így nem marad le egyetlen frissítésről sem."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
 msgstr "Ez egy automatikus Kodi szolgáltatás, amely időzítetten frissíti a zenei és videó adatbázisokat. A különböző adatbázisokhoz eltérő időzítés választható vagy a teljesebb irányítás érdekében cron stílusú időzítés is használható. Amennyiben éppen lejátszik valamit, a frissítés elhalasztódik a lejátszás utánra, hogy ne zavarja a lejátszást. Már támogatott az egyedi videó frissítés és a zene/videó adatbázis tisztítás is."
 
 msgctxt "#30000"

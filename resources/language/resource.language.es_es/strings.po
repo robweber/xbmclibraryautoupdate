@@ -22,12 +22,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
-msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
+msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as Kodi service so you never miss an update."
 msgstr "Actualice sus librerías de Video y Musica de Kodi con un temporizador. El temporizador se ejecuta como un servicio para que nunca se pierda una actualización."
 
 msgctxt "Addon Description"
-msgid "This is an Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
-msgstr "Este es un servicio de Kodi que actualizara sus librerías de música y video con un temporizador. Puede elegir intervalos diferentes para escanear sus bases de datos (video, música, ambas) o puede elegir un temporizador del estilo \"cron\" para un mayor control. Si esta reproduciendo audio o video cuando el temporizador se ejecuta, omitirá la actualización hasta que acabe la reproducción, para que no interrumpa su experiencia multimedia. Actualizar una ruta especifica y limpiar las bases de datos de música y video esta ahora soportado."
+msgid "This is a Kodi Service that will update your music and video libraries on a timer. You can select a different interval to scan your media databases (Audio,Video,Both) or you can set a cron-style timer for greater control. If you are playing an audio or video file when the timer starts it can skip the library update process until it is completed so that you're media experience is not interrupted. Updating a specific Video Path, and Cleaning the Music/Video libraries is now supported."
+msgstr "Este es un servicio de Kodi que actualizara sus librerías de música y video con un temporizador. Puede elegir intervalos diferentes para escanear sus bases de datos (video, música, ambas) o puede elegir un temporizador del estilo cron para un mayor control. Si esta reproduciendo audio o video cuando el temporizador se ejecuta, omitirá la actualización hasta que acabe la reproducción, para que no interrumpa su experiencia multimedia. Actualizar una ruta especifica y limpiar las bases de datos de música y video esta ahora soportado."
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"
