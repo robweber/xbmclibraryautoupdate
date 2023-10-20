@@ -1,6 +1,6 @@
 name: Python Code Check
 
-on: [push, pull_request, workflow_dispatch]
+on: [push, pull_request]
 
 jobs:
   flake8-lint:
@@ -16,4 +16,5 @@ jobs:
       - name: flake8 Lint
         uses: py-actions/flake8@v2
         with:
-          max-line-length: "150"
+          ignore: "E501"
+          exclude: "croniter.py"

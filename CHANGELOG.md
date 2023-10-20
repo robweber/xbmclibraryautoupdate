@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 - updated in app and addon.xml translations
+- moved code checking workflows from Travis CI to GitHub Actions ([Kodi Addon Checker](https://github.com/xbmc/action-kodi-addon-checker) and Flake8 Python check)
 
 ### Fixed
 
