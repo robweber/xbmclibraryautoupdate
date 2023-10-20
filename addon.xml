@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="service.libraryautoupdate"
-    name="Library Auto Update" version="1.2.6~beta1" provider-name="robweber">
+    name="Library Auto Update" version="1.2.5" provider-name="robweber">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.dateutil" version="2.7.3" />
@@ -17,7 +17,9 @@
 		<icon>resources/media/icon.png</icon>
 	</assets>
 	<news>Version 1.2.5
-use a connection check URL instead of google.com</news>
+use a connection check URL instead of google.com
+refactored manual run to avoid scan loops
+updated translations</news>
     <summary lang="bg_BG">Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова няма да изпуснете нито едно обновяване.</summary>
     <summary lang="ca_ES">Actualitza les llibreries de vídeo i música de l&apos;Kodi amb un temporitzador. El temporitzador arranca com un servei de l&apos;Kodi, per tant mai es perdrà una actualització.</summary>
     <summary lang="cs_CZ">Aktualizujte svou knihovnu videa a hudby v Kodi podle časovače. Časovač běží jako služba Kodi, takže nikdy nezmeškáte aktualizaci.</summary>

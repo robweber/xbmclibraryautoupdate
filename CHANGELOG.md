@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.4...robweber:matrix)
+## [Version 1.2.5](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.4...robweber:matrix-1.2.5)
 
 ### Changed
 
@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 
 - use www.google.com for the network connectivity check - thanks @afontenot
+- refactored `manual.py` file and `service.py` to avoid scan trigger loops on manual runs
 
 ## [Version 1.2.4](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.3...robweber:matrix-1.2.4)
 
