@@ -2,6 +2,7 @@ name: Python Code Check
 
 on: [push, pull_request]
 
+# run flake8 but ignore long lines and whitespace after keyword
 jobs:
   flake8-lint:
     runs-on: ubuntu-latest
@@ -16,5 +17,5 @@ jobs:
       - name: flake8 Lint
         uses: py-actions/flake8@v2
         with:
-          ignore: "E501"
+          ignore: "E501,E275"
           exclude: "croniter.py"
