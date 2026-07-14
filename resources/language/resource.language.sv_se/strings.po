@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: XBMC Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-01-15 03:13+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2025-11-17 20:13+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-xbmclibraryautoupdate/sv_se/>\n"
 "Language: sv_se\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 5.14.3\n"
 
 msgctxt "Addon Summary"
 msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
@@ -30,7 +30,7 @@ msgstr "Detta är en Kodi-service som schemalagt kommer att uppdatera ditt musik
 
 msgctxt "#30000"
 msgid "Kodi Library Auto Update"
-msgstr "Kodi biblioteksautouppdaterare"
+msgstr "Automatisk uppdaterare för Kodi-bibliotek"
 
 msgctxt "#30001"
 msgid "General"
@@ -62,7 +62,7 @@ msgstr "Kör under uppspelning"
 
 msgctxt "#30008"
 msgid "Startup Delay"
-msgstr ""
+msgstr "Fördröjning vid uppstart"
 
 msgctxt "#30009"
 msgid "Used Advanced Timer"
@@ -94,7 +94,7 @@ msgstr "Inaktivera förfrågan vid manuell körning"
 
 msgctxt "#30016"
 msgid "Cron syntax %s is incorrect, defaulting to 2 hours"
-msgstr ""
+msgstr "Cron-syntaxen %s är felaktig, standardvärdet är 2 timmar"
 
 msgctxt "#30017"
 msgid "Check if sources exist before scan"
@@ -106,7 +106,7 @@ msgstr "Redigera anpassade sökvägar"
 
 msgctxt "#30021"
 msgid "Choose Action"
-msgstr ""
+msgstr "Välj åtgärd"
 
 msgctxt "#30022"
 msgid "Delete this item?"
@@ -118,11 +118,11 @@ msgstr "Bläddra efter sökväg"
 
 msgctxt "#30030"
 msgid "This update broke custom paths, you must remake them"
-msgstr ""
+msgstr "Den här uppdateringen förstörde anpassade sökvägar, du måste skapa dem på nytt"
 
 msgctxt "#30031"
 msgid "Custom Paths Disclaimer"
-msgstr ""
+msgstr "Ansvarsfriskrivning för anpassade sökvägar"
 
 msgctxt "#30032"
 msgid "Path must already be a valid source with content"
@@ -206,7 +206,7 @@ msgstr "Musik-cronuttryck"
 
 msgctxt "#30060"
 msgid "Update will run again "
-msgstr "Uppdatering kommer att köras igen"
+msgstr "Uppdatering kommer att köras igen "
 
 msgctxt "#30061"
 msgid "Do you wish to manually run an update?"
@@ -214,7 +214,7 @@ msgstr "Vill du manuellt köra en uppdatering?"
 
 msgctxt "#30062"
 msgid "No Delay"
-msgstr ""
+msgstr "Ingen fördröjning"
 
 msgctxt "#30063"
 msgid "1 Minute"
@@ -262,11 +262,11 @@ msgstr "24 timmar"
 
 msgctxt "#30074"
 msgid "How long to delay missed scan after system startup"
-msgstr ""
+msgstr "Hur länge ska man fördröja missad skanning efter systemstart"
 
 msgctxt "#30075"
 msgid "Allow library scans when media is playing"
-msgstr ""
+msgstr "Tillåt bibliotekssökning när media spelas upp"
 
 msgctxt "#30076"
 msgid "Only allow scans to start when system is idle (screensaver active)"
@@ -274,27 +274,27 @@ msgstr "Tillåt endast skanningar att starta när systemet är inaktivt (skärms
 
 msgctxt "#30077"
 msgid "Disables the dialog box when starting a Manual Run"
-msgstr ""
+msgstr "Inaktiverar dialogrutan när du startar en manuell körning"
 
 msgctxt "#30078"
 msgid "Toggle use a cron timer instead of the simple timer"
-msgstr ""
+msgstr "Använd en cron-timer istället för den enkla timern"
 
 msgctxt "#30079"
 msgid "Select how often to start library scans"
-msgstr ""
+msgstr "Välj hur ofta biblioteksskanningar ska startas"
 
 msgctxt "#30080"
 msgid "Set a custom interval using cron syntax - example is '15 */5 * * *' for quarter past the hour every 5 hours every day"
-msgstr ""
+msgstr "Ange ett anpassat intervall med hjälp av cron-syntax - exempel är ”15 */5 * * *” för kvart över en timme var 5:e timme varje dag"
 
 msgctxt "#30081"
 msgid "Launch the custom paths editor to select specific scan directories instead of the entire library"
-msgstr ""
+msgstr "Starta redigeraren för anpassade sökvägar för att välja specifika skanningskataloger i stället för hela biblioteket"
 
 msgctxt "#30082"
 msgid "Run the Kodi library clean process to remove deleted media"
-msgstr ""
+msgstr "Kör Kodi-bibliotekets rensningsprocess för att ta bort borttagna medier"
 
 msgctxt "#30083"
 msgid "Adds additional confirmation prompt before clean process runs"

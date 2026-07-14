@@ -9,17 +9,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-14 21:42+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-12-13 18:13+0000\n"
+"Last-Translator: Alexey <signfinder@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-services/service-xbmclibraryautoupdate/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 msgctxt "Addon Summary"
 msgid "Update your Kodi Video and Music Libraries on a timer. Timer runs as an Kodi service so you never miss an update."
@@ -63,7 +63,7 @@ msgstr "Запуск при воспроизведении"
 
 msgctxt "#30008"
 msgid "Startup Delay"
-msgstr ""
+msgstr "Задержка запуска"
 
 msgctxt "#30009"
 msgid "Used Advanced Timer"
@@ -71,7 +71,7 @@ msgstr "Использовать расширенный таймер"
 
 msgctxt "#30010"
 msgid "Amount of time between updates"
-msgstr ""
+msgstr "Промежуток времени между обновлениями"
 
 msgctxt "#30011"
 msgid "Cron Expression"
@@ -95,39 +95,39 @@ msgstr "Отключить ручной ввод"
 
 msgctxt "#30016"
 msgid "Cron syntax %s is incorrect, defaulting to 2 hours"
-msgstr ""
+msgstr "Синтаксис Cron %s неверен, по умолчанию - 2 часа"
 
 msgctxt "#30017"
 msgid "Check if sources exist before scan"
-msgstr ""
+msgstr "Проверьте перед сканированием, существуют ли источники"
 
 msgctxt "#30020"
 msgid "Edit Custom Paths"
-msgstr ""
+msgstr "Редактирование пользовательских путей"
 
 msgctxt "#30021"
 msgid "Choose Action"
-msgstr ""
+msgstr "Выбрать действие"
 
 msgctxt "#30022"
 msgid "Delete this item?"
-msgstr ""
+msgstr "Удалить этот элемент?"
 
 msgctxt "#30023"
 msgid "Browse for path"
-msgstr ""
+msgstr "Найти нужный путь"
 
 msgctxt "#30030"
 msgid "This update broke custom paths, you must remake them"
-msgstr ""
+msgstr "Это обновление поломало пользовательские пути, вы должны их переделать"
 
 msgctxt "#30031"
 msgid "Custom Paths Disclaimer"
-msgstr ""
+msgstr "Отказ от ответственности за пользовательские пути"
 
 msgctxt "#30032"
 msgid "Path must already be a valid source with content"
-msgstr ""
+msgstr "Путь уже должен быть действительным источником с содержимым"
 
 msgctxt "#30033"
 msgid "Path must match source path exactly to scan"
@@ -215,95 +215,95 @@ msgstr "Вы хотите запустить обновление вручную
 
 msgctxt "#30062"
 msgid "No Delay"
-msgstr ""
+msgstr "Без задержки"
 
 msgctxt "#30063"
 msgid "1 Minute"
-msgstr ""
+msgstr "1 минута"
 
 msgctxt "#30064"
 msgid "2 Minutes"
-msgstr ""
+msgstr "2 минуты"
 
 msgctxt "#30065"
 msgid "3 Minutes"
-msgstr ""
+msgstr "3 минуты"
 
 msgctxt "#30066"
 msgid "4 Minutes"
-msgstr ""
+msgstr "4 минуты"
 
 msgctxt "#30067"
 msgid "5 Minutes"
-msgstr ""
+msgstr "5 минут"
 
 msgctxt "#30068"
 msgid "1 Hour"
-msgstr ""
+msgstr "1 час"
 
 msgctxt "#30069"
 msgid "2 Hours"
-msgstr ""
+msgstr "2 часа"
 
 msgctxt "#30070"
 msgid "4 Hours"
-msgstr ""
+msgstr "4 часа"
 
 msgctxt "#30071"
 msgid "6 Hours"
-msgstr ""
+msgstr "6 часов"
 
 msgctxt "#30072"
 msgid "12 Hours"
-msgstr ""
+msgstr "12 часов"
 
 msgctxt "#30073"
 msgid "24 Hours"
-msgstr ""
+msgstr "24 часа"
 
 msgctxt "#30074"
 msgid "How long to delay missed scan after system startup"
-msgstr ""
+msgstr "Как долго задерживать пропущенную проверку после запуска системы"
 
 msgctxt "#30075"
 msgid "Allow library scans when media is playing"
-msgstr ""
+msgstr "Разрешить сканирование библиотеки при воспроизведении"
 
 msgctxt "#30076"
 msgid "Only allow scans to start when system is idle (screensaver active)"
-msgstr ""
+msgstr "Разрешать запуск сканирования только в режиме ожидания (активна заставка)"
 
 msgctxt "#30077"
 msgid "Disables the dialog box when starting a Manual Run"
-msgstr ""
+msgstr "Отключает диалоговое окно при старте ручного запуска"
 
 msgctxt "#30078"
 msgid "Toggle use a cron timer instead of the simple timer"
-msgstr ""
+msgstr "Переключение использования таймера cron вместо простого таймера"
 
 msgctxt "#30079"
 msgid "Select how often to start library scans"
-msgstr ""
+msgstr "Выберите частоту запуска сканирования библиотеки"
 
 msgctxt "#30080"
 msgid "Set a custom interval using cron syntax - example is '15 */5 * * *' for quarter past the hour every 5 hours every day"
-msgstr ""
+msgstr "Установите пользовательский интервал, используя синтаксис cron, например, \"15 */5 * * *\" для четверти первого часа каждые 5 часов каждый день"
 
 msgctxt "#30081"
 msgid "Launch the custom paths editor to select specific scan directories instead of the entire library"
-msgstr ""
+msgstr "Запустите редактор пользовательских путей для выбора определенных каталогов сканирования вместо всей библиотеки"
 
 msgctxt "#30082"
 msgid "Run the Kodi library clean process to remove deleted media"
-msgstr ""
+msgstr "Запустите очистку библиотеки Kodi, чтобы удалить удаленные данные"
 
 msgctxt "#30083"
 msgid "Adds additional confirmation prompt before clean process runs"
-msgstr ""
+msgstr "Добавляет дополнительный запрос на подтверждение перед запуском очистки"
 
 msgctxt "#30084"
 msgid "Set how often to run the clean process. After each update, once a day, once a week, once a month, or custom"
-msgstr ""
+msgstr "Установите частоту запуска очистки. После каждого обновления, раз в день, раз в неделю, раз в месяц или по вашему выбору"
 
 #~ msgctxt "#30008"
 #~ msgid "Startup Delay (minutes)"
