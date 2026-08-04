@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="service.libraryautoupdate"
-    name="Library Auto Update" version="1.2.6~beta1" provider-name="robweber">
+    name="Library Auto Update" version="1.2.6~beta2" provider-name="robweber">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.dateutil" version="2.7.3" />
@@ -20,6 +20,7 @@
 Fixed issue with crashing on manual run
 more robust cron expression checking
 set default when cron expression is invalid
+fixed looping when clean libraries on update is configured
 </news>
     <summary lang="bg_BG">Обновява библиотеките в Kodi (за видео и музика) чрез брояч. Той се стартира като Kodi услуга, затова няма да изпуснете нито едно обновяване.</summary>
     <summary lang="ca_ES">Actualitza les llibreries de vídeo i música de l&apos;Kodi amb un temporitzador. El temporitzador arranca com un servei de l&apos;Kodi, per tant mai es perdrà una actualització.</summary>

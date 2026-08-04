@@ -9,11 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 - cron expression error checking now sets a default value in addition to throwing an error
+- added constructor with expected parameters to CronSchedule class
 
 ### Fixed
 
 - fixed issue with Run on Idle crashing during manual run - #77
 - also catch `KeyError` during cron expression checking
+- wrong default in `settings.xml` file for Clean Library function, resulted in looping behavor fixes #69
 
 ## [Version 1.2.5](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.4...robweber:matrix-1.2.5)
 
