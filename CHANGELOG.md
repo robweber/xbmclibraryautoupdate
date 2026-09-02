@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased](https://github.com/robweber/xbmclibraryautoupdate/compare/robweber:matrix-1.2.5..robweber:matrix)
+## [Version 1.2.6](https://github.com/robweber/xbmclibraryautoupdate/compare/robweber:matrix-1.2.5..robweber:matrix-1.2.6)
 
 ### Changed
 
@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - fixed issue with Run on Idle crashing during manual run - #77
 - also catch `KeyError` during cron expression checking
-- wrong default in `settings.xml` file for Clean Library function, resulted in looping behavor fixes #69
+- wrong default in `settings.xml` file for Clean Library function, resulted in looping behavior fixes #69
 
 ## [Version 1.2.5](https://github.com/robweber/xbmclibraryautoupdate/compare/matrix-1.2.4...robweber:matrix-1.2.5)
 
